@@ -5,7 +5,7 @@ namespace Gearbox_Back_End.Models;
 
 public partial class Vasarlo
 {
-    public string Id { get; set; } = null!;
+    public Guid Id { get; set; }
 
     public string Keresztnev { get; set; } = null!;
 

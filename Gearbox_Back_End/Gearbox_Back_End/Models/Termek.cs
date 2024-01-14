@@ -5,11 +5,13 @@ namespace Gearbox_Back_End.Models;
 
 public partial class Termek
 {
-    public string Id { get; set; } = null!;
+    public Guid Id { get; set; }
 
     public string Nev { get; set; } = null!;
 
     public string Leiras { get; set; } = null!;
+
+    public int Db { get; set; }
 
     public int Ar { get; set; }
 

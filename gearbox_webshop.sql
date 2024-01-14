@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2023. Dec 26. 19:01
+-- Létrehozás ideje: 2024. Jan 14. 19:08
 -- Kiszolgáló verziója: 8.0.31
 -- PHP verzió: 8.0.26
 
@@ -42,11 +42,12 @@ CREATE TABLE IF NOT EXISTS `jogosultsagok` (
 
 DROP TABLE IF EXISTS `kosar`;
 CREATE TABLE IF NOT EXISTS `kosar` (
-  `Id` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `TermekId` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `TermekId` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `TermekNev` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Db` int NOT NULL,
   `TermekAr` int NOT NULL,
-  `VasarloId` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `VasarloId` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `TermekId` (`TermekId`),
   KEY `VasarloId` (`VasarloId`)
@@ -60,9 +61,10 @@ CREATE TABLE IF NOT EXISTS `kosar` (
 
 DROP TABLE IF EXISTS `termek`;
 CREATE TABLE IF NOT EXISTS `termek` (
-  `Id` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Nev` varchar(200) COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Leiras` longtext COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Db` int NOT NULL,
   `Ar` int NOT NULL,
   `VanERaktaron` tinyint(1) NOT NULL,
   `Kep` blob NOT NULL,
@@ -77,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `termek` (
 
 DROP TABLE IF EXISTS `vasarlo`;
 CREATE TABLE IF NOT EXISTS `vasarlo` (
-  `Id` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Keresztnev` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Vezeteknev` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Telefonszam` int NOT NULL,
@@ -98,8 +100,8 @@ CREATE TABLE IF NOT EXISTS `vasarlo` (
 -- Megkötések a táblához `kosar`
 --
 ALTER TABLE `kosar`
-  ADD CONSTRAINT `kosar_ibfk_1` FOREIGN KEY (`VasarloId`) REFERENCES `vasarlo` (`Id`),
-  ADD CONSTRAINT `kosar_ibfk_2` FOREIGN KEY (`TermekId`) REFERENCES `termek` (`Id`);
+  ADD CONSTRAINT `kosar_ibfk_2` FOREIGN KEY (`VasarloId`) REFERENCES `vasarlo` (`Id`),
+  ADD CONSTRAINT `kosar_ibfk_3` FOREIGN KEY (`TermekId`) REFERENCES `termek` (`Id`);
 
 --
 -- Megkötések a táblához `vasarlo`

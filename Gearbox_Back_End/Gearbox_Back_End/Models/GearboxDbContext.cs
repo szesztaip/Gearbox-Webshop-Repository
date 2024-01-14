@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Gearbox_Back_End.Models;
 
-public partial class GearboxDbContext : DbContext
+public partial class GearBoxDbContext : DbContext
 {
-    public GearboxDbContext()
+    public GearBoxDbContext()
     {
     }
 
-    public GearboxDbContext(DbContextOptions<GearboxDbContext> options)
+    public GearBoxDbContext(DbContextOptions<GearBoxDbContext> options)
         : base(options)
     {
     }
@@ -53,20 +53,17 @@ public partial class GearboxDbContext : DbContext
 
             entity.HasIndex(e => e.VasarloId, "VasarloId");
 
-            entity.Property(e => e.Id).HasMaxLength(65);
-            entity.Property(e => e.TermekId).HasMaxLength(65);
             entity.Property(e => e.TermekNev).HasMaxLength(65);
-            entity.Property(e => e.VasarloId).HasMaxLength(65);
 
             entity.HasOne(d => d.Termek).WithMany(p => p.Kosars)
                 .HasForeignKey(d => d.TermekId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("kosar_ibfk_2");
+                .HasConstraintName("kosar_ibfk_3");
 
             entity.HasOne(d => d.Vasarlo).WithMany(p => p.Kosars)
                 .HasForeignKey(d => d.VasarloId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("kosar_ibfk_1");
+                .HasConstraintName("kosar_ibfk_2");
         });
 
         modelBuilder.Entity<Termek>(entity =>
@@ -75,7 +72,6 @@ public partial class GearboxDbContext : DbContext
 
             entity.ToTable("termek");
 
-            entity.Property(e => e.Id).HasMaxLength(65);
             entity.Property(e => e.Kep).HasColumnType("blob");
             entity.Property(e => e.Nev).HasMaxLength(200);
             entity.Property(e => e.VanEraktaron).HasColumnName("VanERaktaron");
@@ -89,7 +85,6 @@ public partial class GearboxDbContext : DbContext
 
             entity.HasIndex(e => e.Jogosultsag, "Jogosultsag");
 
-            entity.Property(e => e.Id).HasMaxLength(65);
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Hash)
                 .HasMaxLength(65)
