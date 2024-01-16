@@ -42,3 +42,9 @@ C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_E
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\obj\Debug\net7.0\Gearbox_Back_End.pdb
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\obj\Debug\net7.0\Gearbox_Back_End.genruntimeconfig.cache
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\obj\Debug\net7.0\ref\Gearbox_Back_End.dll
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\Gearbox_Back_End\Gearbox_Back_End\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
