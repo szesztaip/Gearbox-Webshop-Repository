@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2024. Jan 14. 19:08
+-- Létrehozás ideje: 2024. Jan 17. 08:32
 -- Kiszolgáló verziója: 8.0.31
 -- PHP verzió: 8.0.26
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `jogosultsagok`;
 CREATE TABLE IF NOT EXISTS `jogosultsagok` (
   `Id` int NOT NULL,
-  `Nev` varchar(45) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Nev` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
@@ -44,7 +44,7 @@ DROP TABLE IF EXISTS `kosar`;
 CREATE TABLE IF NOT EXISTS `kosar` (
   `Id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `TermekId` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `TermekNev` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `TermekNev` varchar(65) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Db` int NOT NULL,
   `TermekAr` int NOT NULL,
   `VasarloId` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
@@ -62,8 +62,8 @@ CREATE TABLE IF NOT EXISTS `kosar` (
 DROP TABLE IF EXISTS `termek`;
 CREATE TABLE IF NOT EXISTS `termek` (
   `Id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Nev` varchar(200) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Leiras` longtext COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Nev` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Leiras` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Db` int NOT NULL,
   `Ar` int NOT NULL,
   `VanERaktaron` tinyint(1) NOT NULL,
@@ -80,15 +80,13 @@ CREATE TABLE IF NOT EXISTS `termek` (
 DROP TABLE IF EXISTS `vasarlo`;
 CREATE TABLE IF NOT EXISTS `vasarlo` (
   `Id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Keresztnev` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Vezeteknev` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `FelhasznaloNev` varchar(65) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Telefonszam` int NOT NULL,
-  `Email` varchar(100) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Jelszo` varchar(32) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `HASH` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `SALT` varchar(65) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `HASH` varchar(65) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Jogosultsag` int NOT NULL,
   PRIMARY KEY (`Id`),
+  UNIQUE KEY `Email` (`Email`),
   KEY `Jogosultsag` (`Jogosultsag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
