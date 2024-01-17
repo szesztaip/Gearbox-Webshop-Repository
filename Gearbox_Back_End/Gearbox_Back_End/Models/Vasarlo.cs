@@ -7,19 +7,13 @@ public partial class Vasarlo
 {
     public Guid Id { get; set; }
 
-    public string Keresztnev { get; set; } = null!;
-
-    public string Vezeteknev { get; set; } = null!;
+    public string FelhasznaloNev { get; set; } = null!;
 
     public int Telefonszam { get; set; }
-
+    
     public string Email { get; set; } = null!;
 
-    public string Jelszo { get; set; } = null!;
-
     public string Hash { get; set; } = null!;
-
-    public string Salt { get; set; } = null!;
 
     public int Jogosultsag { get; set; }
 

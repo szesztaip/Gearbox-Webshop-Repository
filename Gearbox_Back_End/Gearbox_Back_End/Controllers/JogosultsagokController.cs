@@ -76,7 +76,7 @@ namespace Gearbox_Back_End.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult<JogosultsagDto> Put(int id,CreateOrModifyJogosultsagok createOrModifyJogosultsagok)
+        public ActionResult<JogosultsagDto> Put(int id, CreateOrModifyJogosultsagok createOrModifyJogosultsagok)
         {
             using (var context = new GearBoxDbContext())
             {

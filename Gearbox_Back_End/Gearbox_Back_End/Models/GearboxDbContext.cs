@@ -86,15 +86,10 @@ public partial class GearBoxDbContext : DbContext
             entity.HasIndex(e => e.Jogosultsag, "Jogosultsag");
 
             entity.Property(e => e.Email).HasMaxLength(100);
+            entity.Property(e => e.FelhasznaloNev).HasMaxLength(65);
             entity.Property(e => e.Hash)
                 .HasMaxLength(65)
                 .HasColumnName("HASH");
-            entity.Property(e => e.Jelszo).HasMaxLength(32);
-            entity.Property(e => e.Keresztnev).HasMaxLength(65);
-            entity.Property(e => e.Salt)
-                .HasMaxLength(65)
-                .HasColumnName("SALT");
-            entity.Property(e => e.Vezeteknev).HasMaxLength(65);
 
             entity.HasOne(d => d.JogosultsagNavigation).WithMany(p => p.Vasarlos)
                 .HasForeignKey(d => d.Jogosultsag)
