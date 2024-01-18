@@ -10,7 +10,7 @@ public partial class Vasarlo
     public string FelhasznaloNev { get; set; } = null!;
 
     public int Telefonszam { get; set; }
-    
+
     public string Email { get; set; } = null!;
 
     public string Hash { get; set; } = null!;
@@ -19,5 +19,5 @@ public partial class Vasarlo
 
     public virtual Jogosultsagok JogosultsagNavigation { get; set; } = null!;
 
-    public virtual ICollection<Kosar> Kosars { get; set; } = new List<Kosar>();
+    public virtual ICollection<Kosarkapcsolat> Kosarkapcsolats { get; set; } = new List<Kosarkapcsolat>();
 }

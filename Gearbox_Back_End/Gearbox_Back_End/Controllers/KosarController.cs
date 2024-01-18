@@ -1,6 +1,7 @@
 ﻿using Gearbox_Back_End.Dto;
 using Gearbox_Back_End.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Gearbox_Back_End.Controllers
 {
@@ -18,7 +19,7 @@ namespace Gearbox_Back_End.Controllers
                 TermekNev = createOrModifyKosar.TermekNev,
                 Db = createOrModifyKosar.Db,
                 TermekAr = createOrModifyKosar.TermekAr,
-                VasarloId = createOrModifyKosar.VasarloId
+                KosarId = createOrModifyKosar.KosarId
 
             };
             using (var context = new GearBoxDbContext())
@@ -43,7 +44,7 @@ namespace Gearbox_Back_End.Controllers
             {
                 if (context != null)
                 {
-                    return Ok(context.Kosars.ToList());
+                    return Ok(context.Kosars.Include(x=>x.Termek).ToList());
                 }
                 else
                 {
@@ -57,7 +58,7 @@ namespace Gearbox_Back_End.Controllers
         {
             using (var context = new GearBoxDbContext())
             {
-                var kerdezett = context.Kosars.FirstOrDefault(x => x.Id == id);
+                var kerdezett = context.Kosars.Include(x=>x.Termek).FirstOrDefault(x=>x.Id==id);
 
                 if (context != null)
                 {
@@ -93,7 +94,7 @@ namespace Gearbox_Back_End.Controllers
                         valtoztatando.TermekNev = createOrModifyKosar.TermekNev;
                         valtoztatando.Db = createOrModifyKosar.Db;
                         valtoztatando.TermekAr = createOrModifyKosar.TermekAr;
-                        valtoztatando.VasarloId = createOrModifyKosar.VasarloId;
+                        valtoztatando.KosarId = createOrModifyKosar.KosarId;
 
                         context.Kosars.Update(valtoztatando);
                         context.SaveChanges();

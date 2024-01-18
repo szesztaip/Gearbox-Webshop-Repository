@@ -17,6 +17,7 @@ namespace Gearbox_Back_End.Controllers
             {
                 Id = new Guid(),
                 Nev = createOrModifyTermek.Nev,
+                Kategoria = createOrModifyTermek.Kategoria,
                 Leiras = createOrModifyTermek.Leiras,
                 Db = createOrModifyTermek.Db,
                 Ar = createOrModifyTermek.Ar,
@@ -93,6 +94,7 @@ namespace Gearbox_Back_End.Controllers
                     if (valtoztatando != null)
                     {
                         valtoztatando.Nev = createOrModifyTermek.Nev;
+                        valtoztatando.Kategoria = createOrModifyTermek.Kategoria;
                         valtoztatando.Leiras = createOrModifyTermek.Leiras;
                         valtoztatando.Db = createOrModifyTermek.Db;
                         valtoztatando.Ar = createOrModifyTermek.Ar;
