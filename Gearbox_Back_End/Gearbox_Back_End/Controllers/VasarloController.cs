@@ -1,6 +1,8 @@
 ﻿using Gearbox_Back_End.Dto;
 using Gearbox_Back_End.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Gearbox_Back_End.Controllers
 {

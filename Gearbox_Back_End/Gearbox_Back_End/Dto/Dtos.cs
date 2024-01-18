@@ -16,5 +16,8 @@ namespace Gearbox_Back_End.Dto
     public record TermekDto(Guid id, string Nev,string Kategoria, string Leiras, int Db, int Ar, bool VanEraktaron, byte[] Kep);
     public record CreateOrModifyTermek(string Nev,string Kategoria, string Leiras, int Db, int Ar, bool VanEraktaron, byte[] Kep);
 
+    public record KosarKapcsolatDto(Guid Id,Guid VasarloId);
+    public record CreateKosarKapcsolat(Guid VasarloId);
+
 
 }

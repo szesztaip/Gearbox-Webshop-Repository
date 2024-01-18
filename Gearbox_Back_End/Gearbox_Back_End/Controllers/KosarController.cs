@@ -10,22 +10,28 @@ namespace Gearbox_Back_End.Controllers
     public class KosarController : ControllerBase
     {
         [HttpPost]
-        public ActionResult<KosarDto> Post(CreateOrModifyKosar createOrModifyKosar)
+        public ActionResult<KosarDto> Post(Guid termekazon,Guid kosarazon,CreateOrModifyKosar createOrModifyKosar)
         {
-            var UjKosar = new Kosar
-            {
-                Id = new Guid(),
-                TermekId = createOrModifyKosar.TermekId,
-                TermekNev = createOrModifyKosar.TermekNev,
-                Db = createOrModifyKosar.Db,
-                TermekAr = createOrModifyKosar.TermekAr,
-                KosarId = createOrModifyKosar.KosarId
-
-            };
             using (var context = new GearBoxDbContext())
             {
                 if (context != null)
                 {
+                    var termek = context.Termeks.FirstOrDefault(x=>x.Id == termekazon);
+                    if (termek == null)
+                    {
+                        return NotFound("Nincs ilyen termék!");
+                    }
+                    var UjKosar = new Kosar
+                    {
+                        Id = new Guid(),
+                        TermekId = termek.Id,
+                        TermekNev = termek.Nev,
+                        Db = createOrModifyKosar.Db,
+                        TermekAr = termek.Ar*createOrModifyKosar.Db,
+                        KosarId = kosarazon
+
+                    };
+
                     context.Kosars.Add(UjKosar);
                     context.SaveChanges();
                     return StatusCode(201, "Az adatok sikeresen eltárolva!");
@@ -81,20 +87,24 @@ namespace Gearbox_Back_End.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult<KosarDto> Put(Guid id, CreateOrModifyKosar createOrModifyKosar)
+        public ActionResult<KosarDto> Put(Guid id,Guid termekazon, CreateOrModifyKosar createOrModifyKosar)
         {
             using (var context = new GearBoxDbContext())
             {
                 if (context != null)
                 {
                     var valtoztatando = context.Kosars.FirstOrDefault(x => x.Id == id);
+                    var termek = context.Termeks.FirstOrDefault(x => x.Id == termekazon);
+                    if (termek == null)
+                    {
+                        return NotFound("Nincs ilyen termék!");
+                    }
                     if (valtoztatando != null)
                     {
-                        valtoztatando.TermekId = createOrModifyKosar.TermekId;
-                        valtoztatando.TermekNev = createOrModifyKosar.TermekNev;
+                        valtoztatando.TermekId = termek.Id;
+                        valtoztatando.TermekNev = termek.Nev;
                         valtoztatando.Db = createOrModifyKosar.Db;
-                        valtoztatando.TermekAr = createOrModifyKosar.TermekAr;
-                        valtoztatando.KosarId = createOrModifyKosar.KosarId;
+                        valtoztatando.TermekAr = termek.Ar * createOrModifyKosar.Db;
 
                         context.Kosars.Update(valtoztatando);
                         context.SaveChanges();
