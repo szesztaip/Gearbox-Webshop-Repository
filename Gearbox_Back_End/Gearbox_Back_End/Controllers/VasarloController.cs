@@ -1,6 +1,8 @@
 ﻿using Gearbox_Back_End.Dto;
 using Gearbox_Back_End.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Gearbox_Back_End.Controllers
 {
@@ -14,13 +16,10 @@ namespace Gearbox_Back_End.Controllers
             var UjVasarlo = new Vasarlo
             {
                 Id = new Guid(),
-                Keresztnev = createOrModifyVasarlo.Keresztnev,
-                Vezeteknev = createOrModifyVasarlo.Vezeteknev,
+                FelhasznaloNev = createOrModifyVasarlo.Felhasznalonev,
                 Telefonszam = createOrModifyVasarlo.Telefonszam,
                 Email = createOrModifyVasarlo.Email,
-                Jelszo = createOrModifyVasarlo.Jelszo,
-                Hash = createOrModifyVasarlo.HASH,
-                Salt = createOrModifyVasarlo.SALT,
+                Hash = BCrypt.Net.BCrypt.HashPassword(createOrModifyVasarlo.Jelszo),
                 Jogosultsag = createOrModifyVasarlo.Jogosultsag
 
             };
@@ -92,13 +91,10 @@ namespace Gearbox_Back_End.Controllers
                     var valtoztatando = context.Vasarlos.FirstOrDefault(x => x.Id == id);
                     if (valtoztatando != null)
                     {
-                        valtoztatando.Keresztnev = createOrModifyVasarlo.Keresztnev;
-                        valtoztatando.Vezeteknev = createOrModifyVasarlo.Vezeteknev;
+                        valtoztatando.FelhasznaloNev = createOrModifyVasarlo.Felhasznalonev;
                         valtoztatando.Telefonszam = createOrModifyVasarlo.Telefonszam;
                         valtoztatando.Email = createOrModifyVasarlo.Email;
-                        valtoztatando.Jelszo = createOrModifyVasarlo.Jelszo;
-                        valtoztatando.Hash = createOrModifyVasarlo.HASH;
-                        valtoztatando.Salt = createOrModifyVasarlo.SALT;
+                        valtoztatando.Hash = BCrypt.Net.BCrypt.HashPassword(createOrModifyVasarlo.Jelszo);
                         valtoztatando.Jogosultsag = createOrModifyVasarlo.Jogosultsag;
 
                         context.Vasarlos.Update(valtoztatando);

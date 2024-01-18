@@ -9,6 +9,8 @@ public partial class Termek
 
     public string Nev { get; set; } = null!;
 
+    public string Kategoria { get; set; } = null!;
+
     public string Leiras { get; set; } = null!;
 
     public int Db { get; set; }

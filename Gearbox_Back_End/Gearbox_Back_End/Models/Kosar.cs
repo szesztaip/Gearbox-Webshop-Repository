@@ -15,9 +15,9 @@ public partial class Kosar
 
     public int TermekAr { get; set; }
 
-    public Guid VasarloId { get; set; }
+    public Guid KosarId { get; set; }
+
+    public virtual Kosarkapcsolat KosarNavigation { get; set; } = null!;
 
     public virtual Termek Termek { get; set; } = null!;
-
-    public virtual Vasarlo Vasarlo { get; set; } = null!;
 }

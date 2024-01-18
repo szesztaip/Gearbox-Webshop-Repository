@@ -26,16 +26,15 @@ namespace Gearbox_Back_End.Controllers
             var UjVasarlo = new Vasarlo
             {
                 Id = new Guid(),
-                Keresztnev = registerVasarlo.Keresztnev,
-                Vezeteknev = registerVasarlo.Vezeteknev,
+                FelhasznaloNev = registerVasarlo.Felhasznalonev,
                 Telefonszam = registerVasarlo.Telefonszam,
+                Hash = BCrypt.Net.BCrypt.HashPassword(registerVasarlo.Jelszo),
                 Email = registerVasarlo.Email,
-                Jelszo = registerVasarlo.Jelszo,
+
                 Jogosultsag = 0
 
             };
-            UjVasarlo.Hash = BCrypt.Net.BCrypt.HashPassword(registerVasarlo.Jelszo);
-            UjVasarlo.Salt = "placeholder";
+
             using (var context = new GearBoxDbContext())
             {
                 if (context != null)
@@ -86,10 +85,12 @@ namespace Gearbox_Back_End.Controllers
 
         private string CreateToken(Vasarlo vasarlo)
         {
-            using (var context = new GearBoxDbContext()) {
+            using (var context = new GearBoxDbContext())
+            {
                 List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Role,context.Jogosultsagoks.FirstOrDefault(x=>x.Id==vasarlo.Jogosultsag).Nev)
+                new Claim(ClaimTypes.Role,context.Jogosultsagoks.FirstOrDefault(x=>x.Id==vasarlo.Jogosultsag).Nev),
+                new Claim(ClaimTypes.Email,vasarlo.Email)
             };
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("AppSettings:Token").Value!));
