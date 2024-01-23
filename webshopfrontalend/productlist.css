@@ -1,0 +1,9 @@
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-list li {
+    margin-bottom: 1rem;
+  }

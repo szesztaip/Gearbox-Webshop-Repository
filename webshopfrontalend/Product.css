@@ -1,0 +1,13 @@
+.product {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product h3 {
+    margin-top: 0;
+  }
+  
+  .product button {
+    margin-top: 1rem;
+  }
