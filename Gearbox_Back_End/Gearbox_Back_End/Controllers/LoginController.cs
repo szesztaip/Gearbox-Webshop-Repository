@@ -90,7 +90,10 @@ namespace Gearbox_Back_End.Controllers
                 List<Claim> claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Role,context.Jogosultsagoks.FirstOrDefault(x=>x.Id==vasarlo.Jogosultsag).Nev),
-                new Claim(ClaimTypes.Email,vasarlo.Email)
+                new Claim(ClaimTypes.Email,vasarlo.Email),
+                new Claim(ClaimTypes.Name,vasarlo.FelhasznaloNev),
+                new Claim(ClaimTypes.NameIdentifier,vasarlo.Id.ToString()),
+                new Claim(ClaimTypes.MobilePhone,vasarlo.Telefonszam.ToString())
             };
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("AppSettings:Token").Value!));
