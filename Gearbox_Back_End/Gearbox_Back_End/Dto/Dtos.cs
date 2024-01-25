@@ -19,5 +19,7 @@ namespace Gearbox_Back_End.Dto
     public record KosarKapcsolatDto(Guid Id,Guid VasarloId);
     public record CreateKosarKapcsolat(Guid VasarloId);
 
+    public record EmailDto(string To, string Subject, string Body);
+
 
 }
