@@ -9,7 +9,7 @@ public partial class Termek
 
     public string Nev { get; set; } = null!;
 
-    public string Kategoria { get; set; } = null!;
+    public int KategoriaId { get; set; }
 
     public string Leiras { get; set; } = null!;
 
@@ -20,6 +20,8 @@ public partial class Termek
     public bool VanEraktaron { get; set; }
 
     public byte[] Kep { get; set; } = null!;
+
+    public virtual Kategoriafajtak Kategoria { get; set; } = null!;
 
     public virtual ICollection<Kosar> Kosars { get; set; } = new List<Kosar>();
 }

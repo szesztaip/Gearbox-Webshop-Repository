@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2024. Jan 18. 08:26
+-- Létrehozás ideje: 2024. Feb 22. 11:21
 -- Kiszolgáló verziója: 8.0.31
 -- PHP verzió: 8.0.26
 
@@ -36,6 +36,36 @@ CREATE TABLE IF NOT EXISTS `jogosultsagok` (
   PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
+--
+-- A tábla adatainak kiíratása `jogosultsagok`
+--
+
+INSERT INTO `jogosultsagok` (`Id`, `Nev`) VALUES
+(0, 'User'),
+(1, 'Admin');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `kategoriafajtak`
+--
+
+DROP TABLE IF EXISTS `kategoriafajtak`;
+CREATE TABLE IF NOT EXISTS `kategoriafajtak` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `KategoriaNev` varchar(100) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  PRIMARY KEY (`Id`),
+  UNIQUE KEY `KategoriaNev` (`KategoriaNev`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `kategoriafajtak`
+--
+
+INSERT INTO `kategoriafajtak` (`Id`, `KategoriaNev`) VALUES
+(1, 'Monitorok'),
+(2, 'Perifériák');
+
 -- --------------------------------------------------------
 
 --
@@ -64,8 +94,8 @@ CREATE TABLE IF NOT EXISTS `kosar` (
 
 DROP TABLE IF EXISTS `kosarkapcsolat`;
 CREATE TABLE IF NOT EXISTS `kosarkapcsolat` (
-  `Id` char(36) COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `VasarloId` char(36) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `Id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `VasarloId` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `VasarloId` (`VasarloId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
@@ -80,14 +110,22 @@ DROP TABLE IF EXISTS `termek`;
 CREATE TABLE IF NOT EXISTS `termek` (
   `Id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Nev` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
-  `Kategoria` varchar(999) COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `KategoriaId` int NOT NULL,
   `Leiras` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
   `Db` int NOT NULL,
   `Ar` int NOT NULL,
   `VanERaktaron` tinyint(1) NOT NULL,
   `Kep` blob NOT NULL,
-  PRIMARY KEY (`Id`)
+  PRIMARY KEY (`Id`),
+  KEY `KategoriaId` (`KategoriaId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `termek`
+--
+
+INSERT INTO `termek` (`Id`, `Nev`, `KategoriaId`, `Leiras`, `Db`, `Ar`, `VanERaktaron`, `Kep`) VALUES
+('08dc3391-32e5-42df-8907-976db70b701f', 'Egér', 2, 'kurva jó lézeres egér', 10, 5000, 1, 0xe39df8e7aefa);
 
 -- --------------------------------------------------------
 
@@ -109,6 +147,17 @@ CREATE TABLE IF NOT EXISTS `vasarlo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
+-- A tábla adatainak kiíratása `vasarlo`
+--
+
+INSERT INTO `vasarlo` (`Id`, `FelhasznaloNev`, `Telefonszam`, `Email`, `HASH`, `Jogosultsag`) VALUES
+('08dc1cd7-4cf7-40d1-8ab0-63e8a6edddf3', 'Faszfej', 23453, 'string@string.string', '$2a$11$n77v2nsaHP848Ki55zR0PeULNqwn4ZB2DZQdfnromd2gSlElGkrYq', 0),
+('08dc1cdb-d095-4505-8a8e-b701f486ce16', 'Paph Rika', 23456, 'email@email.email', '$2a$11$q88Dxnagdgq7Sk0Z6Xi8GebnYk8FNWNPDnpEflue0dTPlcLANizKC', 0),
+('08dc1cdc-b4fa-45cf-88dd-c3b0fa71e5cd', '0', 0, '0', '$2a$11$4TShGLAANEwl1aMYTeEjNu.PzCS0PGteK9V/w.Iijgr5DqE8YN4Zq', 0),
+('08dc1cdd-3a9f-4131-8ba8-d56f6a611124', 'Névvel Jánosh', 23456, 'Névvel@gmail.com', '$2a$11$dCLF7BNm4Dol5FX2d.Vrs.K4Mt10Gxd1gW/6gYPnC6PTdz7odMpoG', 0),
+('08dc3391-a15a-427e-8317-764552ad8456', 'FoxynSans', 45454, 'string', '$2a$11$PiaD6MaIiQxONa5cKO6oMOZZ.o.KtBtAvTg5MGdnCAmRMBYJPfmya', 1);
+
+--
 -- Megkötések a kiírt táblákhoz
 --
 
@@ -117,13 +166,19 @@ CREATE TABLE IF NOT EXISTS `vasarlo` (
 --
 ALTER TABLE `kosar`
   ADD CONSTRAINT `kosar_ibfk_4` FOREIGN KEY (`KosarId`) REFERENCES `kosarkapcsolat` (`Id`),
-  ADD CONSTRAINT `kosar_ibfk_5` FOREIGN KEY (`TermekId`) REFERENCES `termek` (`Id`);
+  ADD CONSTRAINT `kosar_ibfk_5` FOREIGN KEY (`TermekId`) REFERENCES `termek` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Megkötések a táblához `kosarkapcsolat`
 --
 ALTER TABLE `kosarkapcsolat`
   ADD CONSTRAINT `kosarkapcsolat_ibfk_1` FOREIGN KEY (`VasarloId`) REFERENCES `vasarlo` (`Id`);
+
+--
+-- Megkötések a táblához `termek`
+--
+ALTER TABLE `termek`
+  ADD CONSTRAINT `termek_ibfk_1` FOREIGN KEY (`KategoriaId`) REFERENCES `kategoriafajtak` (`Id`);
 
 --
 -- Megkötések a táblához `vasarlo`

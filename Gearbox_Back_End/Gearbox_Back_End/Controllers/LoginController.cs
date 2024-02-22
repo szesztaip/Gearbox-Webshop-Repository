@@ -67,7 +67,9 @@ namespace Gearbox_Back_End.Controllers
                         else
                         {
                             string token = CreateToken(kerdezett);
-                            return Ok(token);
+                            Token tokenUser = new Token();
+                            tokenUser.UserToken = token;
+                            return Ok(tokenUser);
                         }
 
                     }
@@ -103,6 +105,8 @@ namespace Gearbox_Back_End.Controllers
                 var token = new JwtSecurityToken(
                     claims: claims,
                     expires: DateTime.Now.AddDays(1),
+                    audience: _configuration.GetValue<string>("Authentication:Schemes:Bearer:ValidAudiences:0"),
+                    issuer: _configuration.GetSection("Authentication:Schemes:Bearer:ValidIssuer").Value,
                     signingCredentials: creds);
                 var jwt = new JwtSecurityTokenHandler().WriteToken(token);
 

@@ -17,6 +17,8 @@ public partial class GearBoxDbContext : DbContext
 
     public virtual DbSet<Jogosultsagok> Jogosultsagoks { get; set; }
 
+    public virtual DbSet<Kategoriafajtak> Kategoriafajtaks { get; set; }
+
     public virtual DbSet<Kosar> Kosars { get; set; }
 
     public virtual DbSet<Kosarkapcsolat> Kosarkapcsolats { get; set; }
@@ -43,6 +45,17 @@ public partial class GearBoxDbContext : DbContext
 
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Nev).HasMaxLength(45);
+        });
+
+        modelBuilder.Entity<Kategoriafajtak>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("kategoriafajtak");
+
+            entity.HasIndex(e => e.KategoriaNev, "KategoriaNev").IsUnique();
+
+            entity.Property(e => e.KategoriaNev).HasMaxLength(100);
         });
 
         modelBuilder.Entity<Kosar>(entity =>
@@ -88,10 +101,16 @@ public partial class GearBoxDbContext : DbContext
 
             entity.ToTable("termek");
 
-            entity.Property(e => e.Kategoria).HasMaxLength(999);
+            entity.HasIndex(e => e.KategoriaId, "KategoriaId");
+
             entity.Property(e => e.Kep).HasColumnType("blob");
             entity.Property(e => e.Nev).HasMaxLength(200);
             entity.Property(e => e.VanEraktaron).HasColumnName("VanERaktaron");
+
+            entity.HasOne(d => d.Kategoria).WithMany(p => p.Termeks)
+                .HasForeignKey(d => d.KategoriaId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("termek_ibfk_1");
         });
 
         modelBuilder.Entity<Vasarlo>(entity =>
