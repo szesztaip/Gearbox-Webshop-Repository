@@ -41,7 +41,7 @@ namespace Gearbox_Back_End.Controllers
             }
         }
 
-        [HttpGet,Authorize(Roles = "Admin")]
+        [HttpGet]
         public ActionResult<TermekDto> GetAll()
         {
             using (var context = new GearBoxDbContext())
