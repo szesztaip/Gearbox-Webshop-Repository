@@ -25,6 +25,8 @@ public partial class GearBoxDbContext : DbContext
 
     public virtual DbSet<Termek> Termeks { get; set; }
 
+    public virtual DbSet<Vasalasiadatok> Vasalasiadatoks { get; set; }
+
     public virtual DbSet<Vasarlo> Vasarlos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -72,13 +74,12 @@ public partial class GearBoxDbContext : DbContext
 
             entity.HasOne(d => d.KosarNavigation).WithMany(p => p.Kosars)
                 .HasForeignKey(d => d.KosarId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("kosar_ibfk_4");
+                .HasConstraintName("kosar_ibfk_6");
 
             entity.HasOne(d => d.Termek).WithMany(p => p.Kosars)
                 .HasForeignKey(d => d.TermekId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("kosar_ibfk_5");
+                .HasConstraintName("kosar_ibfk_7");
         });
 
         modelBuilder.Entity<Kosarkapcsolat>(entity =>
@@ -91,7 +92,6 @@ public partial class GearBoxDbContext : DbContext
 
             entity.HasOne(d => d.Vasarlo).WithMany(p => p.Kosarkapcsolats)
                 .HasForeignKey(d => d.VasarloId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("kosarkapcsolat_ibfk_1");
         });
 
@@ -103,14 +103,39 @@ public partial class GearBoxDbContext : DbContext
 
             entity.HasIndex(e => e.KategoriaId, "KategoriaId");
 
-            entity.Property(e => e.Kep).HasColumnType("blob");
+            entity.Property(e => e.Kep).HasMaxLength(999);
+            entity.Property(e => e.Meret).HasMaxLength(5);
             entity.Property(e => e.Nev).HasMaxLength(200);
             entity.Property(e => e.VanEraktaron).HasColumnName("VanERaktaron");
 
             entity.HasOne(d => d.Kategoria).WithMany(p => p.Termeks)
                 .HasForeignKey(d => d.KategoriaId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("termek_ibfk_1");
+        });
+
+        modelBuilder.Entity<Vasalasiadatok>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("vasalasiadatok");
+
+            entity.HasIndex(e => e.KosarId, "KosarId");
+
+            entity.HasIndex(e => e.VasarloId, "VasarloId");
+
+            entity.Property(e => e.Megye).HasMaxLength(999);
+            entity.Property(e => e.Telepules).HasMaxLength(999);
+            entity.Property(e => e.UtcaHazszam).HasMaxLength(999);
+
+            entity.HasOne(d => d.Kosar).WithMany(p => p.Vasalasiadatoks)
+                .HasForeignKey(d => d.KosarId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("vasalasiadatok_ibfk_2");
+
+            entity.HasOne(d => d.Vasarlo).WithMany(p => p.Vasalasiadatoks)
+                .HasForeignKey(d => d.VasarloId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("vasalasiadatok_ibfk_1");
         });
 
         modelBuilder.Entity<Vasarlo>(entity =>
@@ -128,10 +153,10 @@ public partial class GearBoxDbContext : DbContext
             entity.Property(e => e.Hash)
                 .HasMaxLength(65)
                 .HasColumnName("HASH");
+            entity.Property(e => e.Telefonszam).HasMaxLength(15);
 
             entity.HasOne(d => d.JogosultsagNavigation).WithMany(p => p.Vasarlos)
                 .HasForeignKey(d => d.Jogosultsag)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("vasarlo_ibfk_1");
         });
 

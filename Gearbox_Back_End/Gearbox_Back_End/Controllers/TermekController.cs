@@ -84,6 +84,33 @@ namespace Gearbox_Back_End.Controllers
             }
         }
 
+        [HttpGet("{name}")]
+        public ActionResult<TermekDto> Search(string name)
+        {
+            using (var context = new GearBoxDbContext())
+            {
+                var kerdezett = context.Termeks.Where(x=>x.Nev.Contains(name)).ToList();
+
+                if (context != null)
+                {
+                    if (kerdezett.Count > 0)
+                    {
+                        return Ok(kerdezett);
+                    }
+                    else
+                    {
+                        return StatusCode(404, "Nincs ilyen termék!");
+                    }
+                }
+                else
+                {
+                    return StatusCode(503, "A szerver jelenleg nem elérhető");
+                }
+
+
+            }
+        }
+
         [HttpPut("{id}")]
         public ActionResult<TermekDto> Put(Guid id, CreateOrModifyTermek createOrModifyTermek)
         {

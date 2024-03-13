@@ -5,21 +5,26 @@ using Microsoft.AspNetCore.Mvc;
 namespace Gearbox_Back_End.Controllers
 {
     [ApiController]
-    [Route("/Kategoriafajtak")]
-    public class KategoriafajtakController : ControllerBase
+    [Route("/VasarlasiAdatok")]
+    public class VasarlasiAdatokController : ControllerBase
     {
         [HttpPost]
-        public ActionResult<KategoriafajtakDto> Post(CreateOrModifyKategoriakDto createOrModifyJogosultsagok)
+        public ActionResult<VasarlasiAdatokDto> Post(CreateOrModifyVasarlasiAdatokDto createOrModifyVasarlasiAdatokDto)
         {
-            var UjKategoria = new Kategoriafajtak
+            var UjVasarlas = new Vasalasiadatok
             {
-                KategoriaNev = createOrModifyJogosultsagok.kategorianev,
+                Id = new Guid(),
+                VasarloId = createOrModifyVasarlasiAdatokDto.VasarloId,
+                Megye = createOrModifyVasarlasiAdatokDto.Megye,
+                KosarId = createOrModifyVasarlasiAdatokDto.KosarId,
+                Telepules = createOrModifyVasarlasiAdatokDto.Telepules,
+                UtcaHazszam = createOrModifyVasarlasiAdatokDto.UtcaHazszam
             };
             using (var context = new GearBoxDbContext())
             {
                 if (context != null)
                 {
-                    context.Kategoriafajtaks.Add(UjKategoria);
+                    context.Vasalasiadatoks.Add(UjVasarlas);
                     context.SaveChanges();
                     return StatusCode(201, "Az adatok sikeresen eltárolva!");
                 }
@@ -31,13 +36,13 @@ namespace Gearbox_Back_End.Controllers
         }
 
         [HttpGet]
-        public ActionResult<KategoriafajtakDto> GetAll()
+        public ActionResult<VasarlasiAdatokDto> GetAll()
         {
             using (var context = new GearBoxDbContext())
             {
                 if (context != null)
                 {
-                    return Ok(context.Kategoriafajtaks.ToList());
+                    return Ok(context.Vasalasiadatoks.ToList());
                 }
                 else
                 {
@@ -47,11 +52,11 @@ namespace Gearbox_Back_End.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<JogosultsagDto> Get(int id)
+        public ActionResult<VasarlasiAdatokDto> Get(Guid id)
         {
             using (var context = new GearBoxDbContext())
             {
-                var kerdezett = context.Kategoriafajtaks.FirstOrDefault(x => x.Id == id);
+                var kerdezett = context.Vasalasiadatoks.FirstOrDefault(x => x.Id == id);
 
                 if (context != null)
                 {
@@ -61,7 +66,7 @@ namespace Gearbox_Back_End.Controllers
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett kategória nem létezik, vagy nincs eltárolva");
+                        return StatusCode(404, "A keresett vásárlási adat nem létezik, vagy nincs eltárolva");
                     }
                 }
                 else
@@ -74,24 +79,28 @@ namespace Gearbox_Back_End.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult<KategoriafajtakDto> Put(int id, CreateOrModifyKategoriakDto createOrModifyJogosultsagok)
+        public ActionResult<VasarlasiAdatokDto> Put(Guid id, CreateOrModifyVasarlasiAdatokDto createOrModifyVasarlasiAdatokDto)
         {
             using (var context = new GearBoxDbContext())
             {
                 if (context != null)
                 {
-                    var valtoztatando = context.Kategoriafajtaks.FirstOrDefault(x => x.Id == id);
+                    var valtoztatando = context.Vasalasiadatoks.FirstOrDefault(x => x.Id == id);
                     if (valtoztatando != null)
                     {
-                        valtoztatando.KategoriaNev = createOrModifyJogosultsagok.kategorianev;
+                        valtoztatando.VasarloId = createOrModifyVasarlasiAdatokDto.VasarloId;
+                        valtoztatando.Megye = createOrModifyVasarlasiAdatokDto.Megye;
+                        valtoztatando.KosarId = createOrModifyVasarlasiAdatokDto.KosarId;
+                        valtoztatando.Telepules = createOrModifyVasarlasiAdatokDto.Telepules;
+                        valtoztatando.UtcaHazszam = createOrModifyVasarlasiAdatokDto.UtcaHazszam;
 
-                        context.Kategoriafajtaks.Update(valtoztatando);
+                        context.Vasalasiadatoks.Update(valtoztatando);
                         context.SaveChanges();
                         return Ok("Sikeres adatváltoztatás!");
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett kategória nem létezik, vagy nincs eltárolva");
+                        return StatusCode(404, "A keresett vásárlási adat nem létezik, vagy nincs eltárolva");
                     }
                 }
                 else
@@ -102,17 +111,17 @@ namespace Gearbox_Back_End.Controllers
         }
 
         [HttpDelete("{id}")]
-        public ActionResult<KategoriafajtakDto> Delete(int id)
+        public ActionResult<VasarlasiAdatokDto> Delete(Guid id)
         {
             using (var context = new GearBoxDbContext())
             {
-                var kerdezett = context.Kategoriafajtaks.FirstOrDefault(x => x.Id == id);
+                var kerdezett = context.Vasalasiadatoks.FirstOrDefault(x => x.Id == id);
 
                 if (context != null)
                 {
                     if (kerdezett != null)
                     {
-                        context.Kategoriafajtaks.Remove(kerdezett);
+                        context.Vasalasiadatoks.Remove(kerdezett);
                         context.SaveChanges();
                         return Ok("A kategória eltávolítása sikeresen megtörtént");
                     }

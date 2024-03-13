@@ -20,4 +20,6 @@ public partial class Kosar
     public virtual Kosarkapcsolat KosarNavigation { get; set; } = null!;
 
     public virtual Termek Termek { get; set; } = null!;
+
+    public virtual ICollection<Vasalasiadatok> Vasalasiadatoks { get; set; } = new List<Vasalasiadatok>();
 }

@@ -11,6 +11,8 @@ public partial class Termek
 
     public int KategoriaId { get; set; }
 
+    public string Meret { get; set; } = null!;
+
     public string Leiras { get; set; } = null!;
 
     public int Db { get; set; }
@@ -19,7 +21,7 @@ public partial class Termek
 
     public bool VanEraktaron { get; set; }
 
-    public byte[] Kep { get; set; } = null!;
+    public string Kep { get; set; } = null!;
 
     public virtual Kategoriafajtak Kategoria { get; set; } = null!;
 

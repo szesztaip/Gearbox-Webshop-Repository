@@ -82,16 +82,11 @@ namespace Gearbox_Back_End.Controllers
             using (var context = new GearBoxDbContext())
             {
                 var kerdezett = context.Kosarkapcsolats.FirstOrDefault(x => x.Id == id);
-                var torlendo = context.Kosars.Where(x => x.KosarId == id).ToList();
 
                 if (context != null)
                 {
                     if (kerdezett != null)
                     {
-                        foreach (var item in torlendo)
-                        {
-                            context.Kosars.Remove(item);
-                        }
                         context.Kosarkapcsolats.Remove(kerdezett);
                         context.SaveChanges();
                         return Ok("A kosárkapcsolat eltávolítása sikeresen megtörtént");

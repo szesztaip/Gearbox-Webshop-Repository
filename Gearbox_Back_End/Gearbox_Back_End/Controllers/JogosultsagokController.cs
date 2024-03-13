@@ -108,16 +108,11 @@ namespace Gearbox_Back_End.Controllers
             using (var context = new GearBoxDbContext())
             {
                 var kerdezett = context.Jogosultsagoks.FirstOrDefault(x => x.Id == id);
-                var torlendo = context.Vasarlos.Where(x => x.Jogosultsag == id).ToList();
 
                 if (context != null)
                 {
                     if (kerdezett != null)
                     {
-                        foreach (var item in torlendo)
-                        {
-                            context.Vasarlos.Remove(item);
-                        }
                         context.Jogosultsagoks.Remove(kerdezett);
                         context.SaveChanges();
                         return Ok("A jogosultság eltávolítása sikeresen megtörtént");
