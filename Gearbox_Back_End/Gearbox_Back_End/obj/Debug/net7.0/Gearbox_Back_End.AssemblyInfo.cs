@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gearbox_Back_End")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e711a5e639858b17b7a77c0e80c1a93f7453f3b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94db22c4a1fdaa6162023b5c6252c8b7ee780cc1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gearbox_Back_End")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gearbox_Back_End")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
