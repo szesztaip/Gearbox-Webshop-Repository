@@ -13,8 +13,8 @@ namespace Gearbox_Back_End.Dto
     public record RegisterVasarlo(string Felhasznalonev, string Telefonszam, string Email, string Jelszo);
     public record LoginVasarlo(string Email, string Jelszo);
 
-    public record TermekDto(Guid id, string Nev, int Kategoria, string Leiras, int Db, int Ar, bool VanEraktaron, string Kep);
-    public record CreateOrModifyTermek(string Nev, int Kategoria, string Leiras, int Db, int Ar, bool VanEraktaron, string Kep);
+    public record TermekDto(Guid id, string Nev, int Kategoria,string Meret, string Leiras, int Db, int Ar, bool VanEraktaron, string Kep);
+    public record CreateOrModifyTermek(string Nev, int Kategoria,string Meret , string Leiras, int Db, int Ar, bool VanEraktaron, string Kep);
 
     public record KosarKapcsolatDto(Guid Id, Guid VasarloId);
     public record CreateKosarKapcsolat(Guid VasarloId);

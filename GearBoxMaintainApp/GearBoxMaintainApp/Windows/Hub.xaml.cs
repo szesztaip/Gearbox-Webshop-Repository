@@ -26,6 +26,11 @@ namespace GearBoxMaintainApp.Windows
             InitializeComponent();
         }
 
-
+        private void Productconnector_Click(object sender, RoutedEventArgs e)
+        {
+            ProductMain openproducteditor = new ProductMain(tok);
+            openproducteditor.Show();
+            this.Close();
+        }
     }
 }

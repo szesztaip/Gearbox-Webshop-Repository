@@ -19,6 +19,7 @@ namespace Gearbox_Back_End.Controllers
                 Id = new Guid(),
                 Nev = createOrModifyTermek.Nev,
                 KategoriaId = createOrModifyTermek.Kategoria,
+                Meret = createOrModifyTermek.Meret,
                 Leiras = createOrModifyTermek.Leiras,
                 Db = createOrModifyTermek.Db,
                 Ar = createOrModifyTermek.Ar,
@@ -145,7 +146,7 @@ namespace Gearbox_Back_End.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}"),Authorize(Roles ="Admin")]
         public ActionResult<TermekDto> Delete(Guid id)
         {
             using (var context = new GearBoxDbContext())

@@ -1,0 +1,21 @@
+﻿<Window x:Class="GearBoxMaintainApp.Windows.ProductMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GearBoxMaintainApp.Windows"
+        mc:Ignorable="d"
+        Title="Product" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1.3*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DrGrid" IsReadOnly="True"/>
+        <StackPanel Grid.Column="1">
+            <Button x:Name="Select" Content="Select" Width="100" Height="20" Margin="0 10 0 0" Click="Select_Click"/>
+            <Button x:Name="Add_Product" Content="New Product" Margin="0 10 0 0" Width="100" Click="Add_Product_Click"/>
+            <Button x:Name="Delete_Product" Content="Delete" Margin="0 10 0 0" Width="100" Click="Delete_Product_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

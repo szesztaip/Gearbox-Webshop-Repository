@@ -29,3 +29,7 @@ C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintai
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\bin\Debug\net7.0-windows\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Hub.baml
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\GearBoxMaintainApp.csproj.CopyComplete
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductAdd.g.cs
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductMain.g.cs
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductAdd.baml
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductMain.baml
