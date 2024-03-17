@@ -10,6 +10,9 @@
     <Compile Update="Windows\Hub.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\Product_Controllers\ProductEdit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\Product_Controllers\ProductMain.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Hub.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\Product_Controllers\ProductEdit.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Product_Controllers\ProductMain.xaml">

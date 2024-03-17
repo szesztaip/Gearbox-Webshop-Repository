@@ -1,5 +1,6 @@
 ﻿using GearBoxMaintainApp.Tool_Classes;
 using GearBoxMaintainApp.Windows.Product;
+using GearBoxMaintainApp.Windows.Product_Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,11 +32,7 @@ namespace GearBoxMaintainApp.Windows
 
         private void Select_Click(object sender, RoutedEventArgs e)
         {
-            if (DrGrid.SelectedItem != null)
-            {
-                MessageBox.Show((DrGrid.SelectedItem as Termek).Nev);
-            }
-
+            DrGrid.ItemsSource = CRUD.GetTermekek(tok);
         }
 
         private void Add_Product_Click(object sender, RoutedEventArgs e)
@@ -59,6 +56,23 @@ namespace GearBoxMaintainApp.Windows
                 MessageBox.Show(CRUD.DeleteTermek(tok, (DrGrid.SelectedItem as Termek).Id));
             }
             DrGrid.ItemsSource = CRUD.GetTermekek(tok);
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            if (DrGrid.SelectedItem != null)
+            {
+                ProductEdit edit = new ProductEdit(tok, (DrGrid.SelectedItem as Termek));
+                edit.ShowDialog();
+            }
+            
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            Hub hub = new Hub(tok);
+            hub.Show();
+            this.Close();
         }
     }
 }

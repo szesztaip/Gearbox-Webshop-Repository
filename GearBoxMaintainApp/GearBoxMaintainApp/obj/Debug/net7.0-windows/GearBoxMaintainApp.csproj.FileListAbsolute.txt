@@ -33,3 +33,5 @@ C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintai
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductMain.g.cs
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductAdd.baml
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductMain.baml
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductEdit.g.cs
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\Product_Controllers\ProductEdit.baml

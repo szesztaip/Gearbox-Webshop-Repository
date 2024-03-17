@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\App.xaml
-4-455072340
+5-587966094
 
-19-319107696
+20947738773
 2041205140231
-Login.xaml;Windows\Hub.xaml;Windows\Product_Controllers\ProductAdd.xaml;Windows\Product_Controllers\ProductMain.xaml;
+Login.xaml;Windows\Hub.xaml;Windows\Product_Controllers\ProductAdd.xaml;Windows\Product_Controllers\ProductEdit.xaml;Windows\Product_Controllers\ProductMain.xaml;
 
 False
 

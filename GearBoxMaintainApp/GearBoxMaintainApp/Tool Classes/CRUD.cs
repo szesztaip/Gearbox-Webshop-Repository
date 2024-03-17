@@ -81,6 +81,27 @@ namespace GearBoxMaintainApp.Tool_Classes
             }
         }
 
+        public static string PutTermekek(string token,Guid id, TermekDto termek)
+        {
+            string url = "Termek";
+            Connection connection = new Connection();
+            WebClient webClient = new WebClient();
+            webClient.Headers[HttpRequestHeader.ContentType] = "application/json; charset=utf-8";
+            webClient.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
+            webClient.Encoding = Encoding.UTF8;
+
+            try
+            {
+                string result = webClient.UploadString(connection.Url() + url+$"/{id}", "PUT", JsonConvert.SerializeObject(termek));
+                return result;
+            }
+            catch (Exception x)
+            {
+
+                return x.Message;
+            }
+        }
+
         public static string DeleteTermek(string token,Guid id)
         {
             string url = "Termek";
