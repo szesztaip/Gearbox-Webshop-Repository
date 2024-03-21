@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Footer.css';
 
 const Footer = () => {
@@ -25,7 +27,7 @@ const Footer = () => {
           <div className="footer-column">
             <h5>Popular Categories</h5>
             <ul>
-              <li >Shoes</li>
+             <Link to='/shoes'><li>Shoes</li></Link>
               <li>Shirts</li>
               <li>Pants</li>
               <li>Accessories</li>

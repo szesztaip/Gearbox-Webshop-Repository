@@ -9,13 +9,13 @@
     padding: 20px;
   }
   
-  @media (max-width: 952px) {
+  @media (max-width: 412px) {
     .content-container {
       padding: 10px;
     }
   }
   
-  @media (max-width: 858px) {
+  @media (max-width: 412px) {
     .app-container {
       flex-direction: column;
     }
@@ -27,10 +27,11 @@
 
   body{
     background-color:ghostwhite;
-    height: 100vh;
     background-repeat: no-repeat;
     background-position:auto;
     background-size: top;
+    
 
   }
   
+ 

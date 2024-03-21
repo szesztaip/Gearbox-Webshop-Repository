@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCart } from './CartContext';
 import './Navbar.css';
 import logo from './logo.png'; // Assuming your logo is in the same folder
+import login from './login.png';
+import Cart from './cart.png';
 
-
-const Navbar = () => {
+function Navbar() {
+  const { cartItems } = useCart();
   const [searchQuery, setSearchQuery] = useState('');
+  const [showDropdown, setShowDropdown] = useState(false); // State for controlling dropdown visibility
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
@@ -17,6 +21,24 @@ const Navbar = () => {
     }
   };
 
+  const handleLoginClick = () => {
+    const userToken = localStorage.getItem('userToken');
+    if (userToken) {
+      setShowDropdown(!showDropdown); // Toggle dropdown visibility
+    } else {
+      navigate('/login'); // Redirect to login page
+    }
+  };
+
+  const handleLogout = () => {
+    // Clear user token from localStorage
+    localStorage.removeItem('userToken');
+    // Close dropdown
+    setShowDropdown(false);
+    // Redirect to home page
+    navigate('/');
+  };
+
   return (
     <header className="site-header">
       <div className="logo-container">
@@ -26,18 +48,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-middle">
         <ul className="navbar-nav">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/Women">Women</Link></li>
-          <li><Link to="/men">Men</Link></li>
-          <li><Link to="/children">Children</Link></li>
-          <li className="dropdown">
-            <Link to="/category">Category</Link>
-            <div className="dropdown-content">
-              <Link to="/shoes">Shoes</Link>
-              <Link to="/shirts">Shirts</Link>
-              <Link to="/pants">Pants</Link>
-            </div>
-          </li>
+          {/* Dropdown for Women, Men, Children */}
         </ul>
       </div>
       <div className="navbar-right">
@@ -51,15 +62,30 @@ const Navbar = () => {
             onKeyPress={handleSearch}
           />
         </div>
-        <Link to="/login" className="login-link">Login</Link>
-      </div>
-      <div className="cart-icon">
-        <Link to="/cart">
-             <img src="/shopping-cart.png" alt="" />
+        {localStorage.getItem('userToken') ? (
+          <div className="dropdown">
+            <button className="login-link" onClick={handleLoginClick}>
+              <img src={login} alt="Login" />
+            </button>
+            {showDropdown && (
+              <div className="dropdown-content">
+                <Link to="/profile">Profile</Link>
+                <Link to="/" onClick={handleLogout}>Logout</Link>
+              </div>
+            )}
+          </div>
+        ) : (
+          <Link to="/login" className="login-link">
+            <img src={login} alt="Login" />
+          </Link>
+        )}
+        <Link to="/cart" className="cart-icon">
+          <img src={Cart} alt="Cart" />
+          <span>Cart: {cartItems.length} items</span>
         </Link>
       </div>
     </header>
   );
-};
+}
 
 export default Navbar;
