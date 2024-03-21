@@ -48,7 +48,28 @@ function Navbar() {
       </div>
       <div className="navbar-middle">
         <ul className="navbar-nav">
-          {/* Dropdown for Women, Men, Children */}
+          <li><Link to="/">Home</Link></li>
+          <li className="dropdown">Women
+            <div className="dropdown-content">
+              <Link to="/women/shoes">Shoes</Link>
+              <Link to="/women/shirts">Shirts</Link>
+              <Link to="/women/pants">Pants</Link>
+            </div>
+          </li>
+          <li className="dropdown">Men
+            <div className="dropdown-content">
+              <Link to="/men/shoes">Shoes</Link>
+              <Link to="/men/shirts">Shirts</Link>
+              <Link to="/men/pants">Pants</Link>
+            </div>
+          </li>
+          <li className="dropdown">Children
+            <div className="dropdown-content">
+              <Link to="/children/shoes">Shoes</Link>
+              <Link to="/children/shirts">Shirts</Link>
+              <Link to="/children/pants">Pants</Link>
+            </div>
+          </li>
         </ul>
       </div>
       <div className="navbar-right">

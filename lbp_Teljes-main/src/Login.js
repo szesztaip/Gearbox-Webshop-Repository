@@ -3,12 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
-  const [userName, setUserName] = useState('');
+  const [felhasznalonev, setUserName] = useState('');
   const [jelszo, setPassword] = useState('');
-  const [email, setEmail] = useState(''); // E-mail állapot hozzáadása
+  const [email, setEmail] = useState('');
+  const [telefonszam, setPhoneNumber] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [view, setView] = useState('login');
-
 
   const navigate = useNavigate();
 
@@ -21,13 +21,12 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, jelszo}),
-        
       });
       const data = await response.json();
       if (response.ok && data.userToken) {
         localStorage.setItem("userToken", data.userToken);
         toggleLogin();
-        navigate("/"); // Redirecting the user to the homepage after successful login
+        navigate("/");
       } else {
         console.error("Login failed, response status:", response.status);
       }
@@ -35,40 +34,46 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
       console.error("An error occurred during login:", error);
     }
   };
+
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      // Assuming "https://localhost:7275/register" is your backend endpoint for registration
-      const response = await fetch("https://localhost:7275/register", {
+      const response = await fetch("https://localhost:7063/regisztracio", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          userName,
+          felhasznalonev,
+          telefonszam,
           email,
-          jelszo, // Ensure your backend properly hashes this before storing
+          jelszo,
         }),
       });
   
       if (response.ok) {
         console.log("Registration successful");
-        // Here you might want to clear the form or redirect the user to a login page
-        setUserName('');
-        setEmail('');
-        setPassword('');
-        navigate("/"); // Redirecting the user to the login page
+        setUserName(felhasznalonev);
+        setEmail(email);
+        setPassword(jelszo);
+        setPhoneNumber(telefonszam);
+  
+        // Sikeres regisztráció esetén hívjuk meg a handleLogin-t és adjuk át neki az adatokat
+        handleLogin(e);
+  
+        navigate("/");
       } else {
         console.error("Registration failed, response status:", response.status);
-        // Handle different response statuses (e.g., 400 Bad Request) as needed
       }
     } catch (error) {
       console.error("An error occurred during registration:", error);
-      // Handle errors (e.g., network issues)
     }
   };
+  
+
   const switchToRegister = () => setView('register');
   const switchToLogin = () => setView('login');
+
   return (
     <div className="hero">
       <div className="form-box">
@@ -94,8 +99,9 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
 
         {view === 'register' && (
            <form id="register" className="input-group" style={{ left: view === 'login' ? '450px' : '50px' }}  onSubmit={handleRegister}>
-           <input type="text" className="input-field" placeholder="Username" required value={userName} onChange={(e) => setUserName(e.target.value)} />
+           <input type="text" className="input-field" placeholder="Username" required value={felhasznalonev} onChange={(e) => setUserName(e.target.value)} />
            <input type="email" className="input-field" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+           <input type="tel" className="input-field" placeholder="Phone number" required value={telefonszam} onChange={(e) => setPhoneNumber(e.target.value)} />
            <input type="password" className="input-field" placeholder="Password" required value={jelszo} onChange={(e) => setPassword(e.target.value)} />
            <div className="field-checkbox padding-top--8">
              <label>
