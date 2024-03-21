@@ -9,7 +9,7 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) => {
   const [telefonszam, setPhoneNumber] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [view, setView] = useState('login');
-
+  const [termsAccepted, setTermsAccepted] = useState(false); // Hozzáadott állapot a feltételek elfogadásának nyomon követésére
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -37,6 +37,11 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    // Ellenőrizzük, hogy a feltételeket elfogadták-e
+    if (!termsAccepted) {
+      alert("A regisztrációhoz kérem fogadja el a felhasználói feltételeket!");
+      return;
+    }
     try {
       const response = await fetch("https://localhost:7063/regisztracio", {
         method: "POST",
@@ -127,7 +132,7 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) => {
             <input type="password" className="input-field" placeholder="Password" required value={jelszo} onChange={(e) => setPassword(e.target.value)} />
             <div className="field-checkbox padding-top--8">
               <label>
-                <input type="checkbox" className="check-box" />
+                <input type="checkbox" className="check-box" checked={termsAccepted} onChange={(e) => setTermsAccepted(e.target.checked)} />
                 <span>I agree to the terms & conditions</span>
               </label>
             </div>
