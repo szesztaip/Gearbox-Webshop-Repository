@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
-const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
+const Login = ({ isLoggedIn, toggleLogin = () => {} }) => {
   const [felhasznalonev, setUserName] = useState('');
   const [jelszo, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, jelszo}),
+        body: JSON.stringify({ email, jelszo }),
       });
       const data = await response.json();
       if (response.ok && data.userToken) {
@@ -50,17 +50,39 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
           jelszo,
         }),
       });
-  
+
       if (response.ok) {
         console.log("Registration successful");
         setUserName(felhasznalonev);
         setEmail(email);
         setPassword(jelszo);
         setPhoneNumber(telefonszam);
-  
-        // Sikeres regisztráció esetén hívjuk meg a handleLogin-t és adjuk át neki az adatokat
+
+        // Sikeres regisztráció esetén küldjünk egy üdvözlő e-mailt
+        try {
+          const emailResponse = await fetch("https://localhost:7063/Email", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              to: email,
+              subject: "Üdvözlünk webáruházunkba",
+              body: "Köszönjük, hogy a mi webáruházunkat választotta!",
+            }),
+          });
+          if (emailResponse.ok) {
+            console.log("Welcome email sent successfully!");
+          } else {
+            console.error("Failed to send welcome email:", emailResponse.status);
+          }
+        } catch (error) {
+          console.error("An error occurred while sending welcome email:", error);
+        }
+
+        // Sikeres regisztráció után bejelentkeztetjük a felhasználót
         handleLogin(e);
-  
+
         navigate("/");
       } else {
         console.error("Registration failed, response status:", response.status);
@@ -69,7 +91,7 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
       console.error("An error occurred during registration:", error);
     }
   };
-  
+
 
   const switchToRegister = () => setView('register');
   const switchToLogin = () => setView('login');
@@ -98,19 +120,19 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) =>{
         )}
 
         {view === 'register' && (
-           <form id="register" className="input-group" style={{ left: view === 'login' ? '450px' : '50px' }}  onSubmit={handleRegister}>
-           <input type="text" className="input-field" placeholder="Username" required value={felhasznalonev} onChange={(e) => setUserName(e.target.value)} />
-           <input type="email" className="input-field" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-           <input type="tel" className="input-field" placeholder="Phone number" required value={telefonszam} onChange={(e) => setPhoneNumber(e.target.value)} />
-           <input type="password" className="input-field" placeholder="Password" required value={jelszo} onChange={(e) => setPassword(e.target.value)} />
-           <div className="field-checkbox padding-top--8">
-             <label>
-               <input type="checkbox" className="check-box" />
-               <span>I agree to the terms & conditions</span>
-             </label>
-           </div>
-           <button className="submit-btn" type="submit">Register</button>
-         </form>
+          <form id="register" className="input-group" style={{ left: view === 'login' ? '450px' : '50px' }} onSubmit={handleRegister}>
+            <input type="text" className="input-field" placeholder="Username" required value={felhasznalonev} onChange={(e) => setUserName(e.target.value)} />
+            <input type="email" className="input-field" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="tel" className="input-field" placeholder="Phone number" required value={telefonszam} onChange={(e) => setPhoneNumber(e.target.value)} />
+            <input type="password" className="input-field" placeholder="Password" required value={jelszo} onChange={(e) => setPassword(e.target.value)} />
+            <div className="field-checkbox padding-top--8">
+              <label>
+                <input type="checkbox" className="check-box" />
+                <span>I agree to the terms & conditions</span>
+              </label>
+            </div>
+            <button className="submit-btn" type="submit">Register</button>
+          </form>
         )}
       </div>
     </div>
