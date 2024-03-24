@@ -15,6 +15,8 @@ public partial class GearBoxDbContext : DbContext
     {
     }
 
+    public virtual DbSet<Besorola> Besorolas { get; set; }
+
     public virtual DbSet<Jogosultsagok> Jogosultsagoks { get; set; }
 
     public virtual DbSet<Kategoriafajtak> Kategoriafajtaks { get; set; }
@@ -38,6 +40,15 @@ public partial class GearBoxDbContext : DbContext
         modelBuilder
             .UseCollation("utf8mb4_hungarian_ci")
             .HasCharSet("utf8mb4");
+
+        modelBuilder.Entity<Besorola>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("besorolas");
+
+            entity.Property(e => e.Nev).HasMaxLength(999);
+        });
 
         modelBuilder.Entity<Jogosultsagok>(entity =>
         {
@@ -101,12 +112,18 @@ public partial class GearBoxDbContext : DbContext
 
             entity.ToTable("termek");
 
+            entity.HasIndex(e => e.BesorolasId, "BesorolasId");
+
             entity.HasIndex(e => e.KategoriaId, "KategoriaId");
 
             entity.Property(e => e.Kep).HasMaxLength(999);
             entity.Property(e => e.Meret).HasMaxLength(5);
             entity.Property(e => e.Nev).HasMaxLength(200);
             entity.Property(e => e.VanEraktaron).HasColumnName("VanERaktaron");
+
+            entity.HasOne(d => d.Besorolas).WithMany(p => p.Termeks)
+                .HasForeignKey(d => d.BesorolasId)
+                .HasConstraintName("termek_ibfk_2");
 
             entity.HasOne(d => d.Kategoria).WithMany(p => p.Termeks)
                 .HasForeignKey(d => d.KategoriaId)

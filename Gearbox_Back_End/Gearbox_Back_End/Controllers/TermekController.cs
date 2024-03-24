@@ -19,6 +19,7 @@ namespace Gearbox_Back_End.Controllers
                 Id = new Guid(),
                 Nev = createOrModifyTermek.Nev,
                 KategoriaId = createOrModifyTermek.Kategoria,
+                BesorolasId = createOrModifyTermek.BesorolasId,
                 Meret = createOrModifyTermek.Meret,
                 Leiras = createOrModifyTermek.Leiras,
                 Db = createOrModifyTermek.Db,
@@ -124,6 +125,7 @@ namespace Gearbox_Back_End.Controllers
                     {
                         valtoztatando.Nev = createOrModifyTermek.Nev;
                         valtoztatando.KategoriaId = createOrModifyTermek.Kategoria;
+                        valtoztatando.BesorolasId = createOrModifyTermek.BesorolasId;
                         valtoztatando.Meret = createOrModifyTermek.Meret;
                         valtoztatando.Leiras = createOrModifyTermek.Leiras;
                         valtoztatando.Db = createOrModifyTermek.Db;

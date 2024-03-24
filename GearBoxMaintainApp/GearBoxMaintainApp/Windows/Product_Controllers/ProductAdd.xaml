@@ -16,6 +16,10 @@
                 <Label Content="Category : " FontSize="20"/>
                 <ComboBox x:Name="Category" Width="150"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="14 0 0 10">
+                <Label Content="SortType : " FontSize="20"/>
+                <ComboBox x:Name="SortType" Width="150"/>
+            </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="60 0 0 10">
                 <Label Content="Size : " FontSize="20"/>
                 <TextBox x:Name="Size" Width="150"/>

@@ -13,6 +13,8 @@ namespace GearBoxMaintainApp.Dtos
 
         public int kategoria { get; set; }
 
+        public Guid besorolasId { get; set; }
+
         public string meret { get; set; } = null!;
 
         public string leiras { get; set; } = null!;

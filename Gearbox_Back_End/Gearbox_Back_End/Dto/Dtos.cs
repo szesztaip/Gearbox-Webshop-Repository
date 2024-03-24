@@ -13,8 +13,8 @@ namespace Gearbox_Back_End.Dto
     public record RegisterVasarlo(string Felhasznalonev, string Telefonszam, string Email, string Jelszo);
     public record LoginVasarlo(string Email, string Jelszo);
 
-    public record TermekDto(Guid id, string Nev, int Kategoria,string Meret, string Leiras, int Db, int Ar, bool VanEraktaron, string Kep);
-    public record CreateOrModifyTermek(string Nev, int Kategoria,string Meret , string Leiras, int Db, int Ar, bool VanEraktaron, string Kep);
+    public record TermekDto(Guid id, string Nev, int Kategoria,Guid BesorolasId,string Meret, string Leiras, int Db, int Ar, bool VanEraktaron, string Kep);
+    public record CreateOrModifyTermek(string Nev, int Kategoria, Guid BesorolasId, string Meret , string Leiras, int Db, int Ar, bool VanEraktaron, string Kep);
 
     public record KosarKapcsolatDto(Guid Id, Guid VasarloId);
     public record CreateKosarKapcsolat(Guid VasarloId);
@@ -23,6 +23,9 @@ namespace Gearbox_Back_End.Dto
 
     public record KategoriafajtakDto(int id, string kategorianev);
     public record CreateOrModifyKategoriakDto(string kategorianev);
+
+    public record BesorolasDto(int id, string besorolasnev);
+    public record CreateOrModifyBesorolasDto(string besorolasnev);
 
     public record VasarlasiAdatokDto(Guid Id,Guid VasarloId,string Megye,Guid KosarId,string Telepules,string UtcaHazszam);
     public record CreateOrModifyVasarlasiAdatokDto(Guid VasarloId, string Megye, Guid KosarId, string Telepules, string UtcaHazszam);
