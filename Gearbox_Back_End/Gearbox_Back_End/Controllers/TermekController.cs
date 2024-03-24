@@ -124,6 +124,7 @@ namespace Gearbox_Back_End.Controllers
                     {
                         valtoztatando.Nev = createOrModifyTermek.Nev;
                         valtoztatando.KategoriaId = createOrModifyTermek.Kategoria;
+                        valtoztatando.Meret = createOrModifyTermek.Meret;
                         valtoztatando.Leiras = createOrModifyTermek.Leiras;
                         valtoztatando.Db = createOrModifyTermek.Db;
                         valtoztatando.Ar = createOrModifyTermek.Ar;

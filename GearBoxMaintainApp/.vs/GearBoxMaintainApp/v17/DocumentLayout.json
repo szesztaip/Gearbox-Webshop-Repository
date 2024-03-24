@@ -1,0 +1,386 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\windows\\product_controllers\\productmain.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\windows\\product_controllers\\productmain.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\windows\\product_controllers\\productedit.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\windows\\product_controllers\\productedit.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\windows\\product_controllers\\productadd.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\windows\\product_controllers\\productadd.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\windows\\product_controllers\\productadd.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\windows\\product_controllers\\productadd.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\windows\\hub.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\windows\\hub.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\windows\\product_controllers\\productmain.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\windows\\product_controllers\\productmain.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\windows\\product_controllers\\productedit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\windows\\product_controllers\\productedit.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\tool classes\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\tool classes\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\models\\termek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\models\\termek.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\dtos\\termekdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\dtos\\termekdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\models\\kategoriafajtak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\models\\kategoriafajtak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\models\\vasarlo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\models\\vasarlo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\windows\\hub.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\windows\\hub.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\dtos\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\dtos\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\models\\vasalasiadatok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\models\\vasalasiadatok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\models\\kosarkapcsolat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\models\\kosarkapcsolat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\models\\kosar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\models\\kosar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\models\\jogosultsagok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\models\\jogosultsagok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearboxmaintainapp\\gearboxmaintainapp\\tool classes\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{140B7B60-9452-4845-B8A9-20AFE049CDB5}|GearBoxMaintainApp\\GearBoxMaintainApp.csproj|solutionrelative:gearboxmaintainapp\\tool classes\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Hub.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Hub.xaml.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Windows\\Hub.xaml.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Hub.xaml.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Windows\\Hub.xaml.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Termek.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Termek.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Models\\Termek.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Termek.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Models\\Termek.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductAdd.xaml",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductAdd.xaml",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductAdd.xaml",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductAdd.xaml",
+              "RelativeToolTip": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductAdd.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-20T13:07:57.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductAdd.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductAdd.xaml.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductAdd.xaml.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductAdd.xaml.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductAdd.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAKF1oMwBUAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\App.xaml",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\App.xaml",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\App.xaml",
+              "RelativeToolTip": "GearBoxMaintainApp\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-20T13:07:57.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductEdit.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductEdit.xaml.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductEdit.xaml.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductEdit.xaml.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductEdit.xaml.cs",
+              "ViewState": "AQIAACYAAAAAAPDm51UkwCQAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:56.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductMain.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductMain.xaml.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductMain.xaml.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductMain.xaml.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductMain.xaml.cs",
+              "ViewState": "AQIAADMAAAAAAADOi4ItwEIAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TermekDto.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Dtos\\TermekDto.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Dtos\\TermekDto.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Dtos\\TermekDto.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Dtos\\TermekDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductMain.xaml",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductMain.xaml",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductMain.xaml",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductMain.xaml",
+              "RelativeToolTip": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductMain.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-20T13:07:57.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Vasarlo.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Vasarlo.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Models\\Vasarlo.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Vasarlo.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Models\\Vasarlo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CRUD.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Tool Classes\\CRUD.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Tool Classes\\CRUD.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Tool Classes\\CRUD.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Tool Classes\\CRUD.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAF4AAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductEdit.xaml",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductEdit.xaml",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductEdit.xaml",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductEdit.xaml",
+              "RelativeToolTip": "GearBoxMaintainApp\\Windows\\Product_Controllers\\ProductEdit.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-20T13:07:57.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Kategoriafajtak.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Kategoriafajtak.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Models\\Kategoriafajtak.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Kategoriafajtak.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Models\\Kategoriafajtak.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Dtos\\LoginDto.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Dtos\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Dtos\\LoginDto.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Dtos\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Kosarkapcsolat.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Kosarkapcsolat.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Models\\Kosarkapcsolat.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Kosarkapcsolat.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Models\\Kosarkapcsolat.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Login.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Login.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Login.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Login.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAwCcAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Kosar.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Kosar.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Models\\Kosar.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Kosar.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Models\\Kosar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Vasalasiadatok.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Vasalasiadatok.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Models\\Vasalasiadatok.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Vasalasiadatok.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Models\\Vasalasiadatok.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Hub.xaml",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Hub.xaml",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Windows\\Hub.xaml",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Windows\\Hub.xaml",
+              "RelativeToolTip": "GearBoxMaintainApp\\Windows\\Hub.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-20T13:07:57.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Token.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Dtos\\Token.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Dtos\\Token.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Dtos\\Token.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Dtos\\Token.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Login.xaml",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Login.xaml",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Login.xaml",
+              "RelativeToolTip": "GearBoxMaintainApp\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-20T13:07:57.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Jogosultsagok.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Jogosultsagok.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Models\\Jogosultsagok.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Models\\Jogosultsagok.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Models\\Jogosultsagok.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Tool Classes\\Connection.cs",
+              "RelativeDocumentMoniker": "GearBoxMaintainApp\\Tool Classes\\Connection.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\GearBoxMaintainApp\\GearBoxMaintainApp\\Tool Classes\\Connection.cs",
+              "RelativeToolTip": "GearBoxMaintainApp\\Tool Classes\\Connection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.578Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

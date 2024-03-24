@@ -64,6 +64,7 @@ namespace GearBoxMaintainApp.Windows
             {
                 ProductEdit edit = new ProductEdit(tok, (DrGrid.SelectedItem as Termek));
                 edit.ShowDialog();
+                DrGrid.ItemsSource = CRUD.GetTermekek(tok);
             }
             
         }

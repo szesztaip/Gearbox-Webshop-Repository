@@ -1,0 +1,983 @@
+[
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.EmailController",
+    "Method": "SendEmail",
+    "RelativePath": "Email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Gearbox_Back_End.Dto.EmailDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.JogosultsagokController",
+    "Method": "Post",
+    "RelativePath": "Jogosultsag",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createOrModifyJogosultsagok",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyJogosultsagok",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.JogosultsagokController",
+    "Method": "GetAll",
+    "RelativePath": "Jogosultsag",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.JogosultsagokController",
+    "Method": "Get",
+    "RelativePath": "Jogosultsag/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.JogosultsagokController",
+    "Method": "Put",
+    "RelativePath": "Jogosultsag/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createOrModifyJogosultsagok",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyJogosultsagok",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.JogosultsagokController",
+    "Method": "Delete",
+    "RelativePath": "Jogosultsag/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KategoriafajtakController",
+    "Method": "Post",
+    "RelativePath": "Kategoriafajtak",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createOrModifyJogosultsagok",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyKategoriakDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KategoriafajtakDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KategoriafajtakController",
+    "Method": "GetAll",
+    "RelativePath": "Kategoriafajtak",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KategoriafajtakDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KategoriafajtakController",
+    "Method": "Get",
+    "RelativePath": "Kategoriafajtak/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KategoriafajtakController",
+    "Method": "Put",
+    "RelativePath": "Kategoriafajtak/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "createOrModifyJogosultsagok",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyKategoriakDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KategoriafajtakDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KategoriafajtakController",
+    "Method": "Delete",
+    "RelativePath": "Kategoriafajtak/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KategoriafajtakDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarController",
+    "Method": "Post",
+    "RelativePath": "Kosar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "termekazon",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "kosarazon",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "createOrModifyKosar",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyKosar",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KosarDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarController",
+    "Method": "GetAll",
+    "RelativePath": "Kosar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KosarDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarController",
+    "Method": "Get",
+    "RelativePath": "Kosar/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KosarDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarController",
+    "Method": "Put",
+    "RelativePath": "Kosar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "termekazon",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "createOrModifyKosar",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyKosar",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KosarDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarController",
+    "Method": "Delete",
+    "RelativePath": "Kosar/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KosarDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarKapcsolatController",
+    "Method": "Post",
+    "RelativePath": "KosarKapcsolat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createKosarKapcsolat",
+        "Type": "Gearbox_Back_End.Dto.CreateKosarKapcsolat",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.KosarKapcsolatDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarKapcsolatController",
+    "Method": "GetAll",
+    "RelativePath": "KosarKapcsolat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarKapcsolatController",
+    "Method": "Get",
+    "RelativePath": "KosarKapcsolat/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.KosarKapcsolatController",
+    "Method": "Delete",
+    "RelativePath": "KosarKapcsolat/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "login/bejelentkezes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginVasarlo",
+        "Type": "Gearbox_Back_End.Dto.LoginVasarlo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.LoginVasarlo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.LoginController",
+    "Method": "Register",
+    "RelativePath": "regisztracio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerVasarlo",
+        "Type": "Gearbox_Back_End.Dto.RegisterVasarlo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.RegisterVasarlo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.TermekController",
+    "Method": "Post",
+    "RelativePath": "Termek",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createOrModifyTermek",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyTermek",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.TermekDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.TermekController",
+    "Method": "GetAll",
+    "RelativePath": "Termek",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.TermekDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.TermekController",
+    "Method": "Get",
+    "RelativePath": "Termek/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.TermekDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.TermekController",
+    "Method": "Put",
+    "RelativePath": "Termek/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createOrModifyTermek",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyTermek",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.TermekDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.TermekController",
+    "Method": "Delete",
+    "RelativePath": "Termek/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.TermekDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.TermekController",
+    "Method": "Search",
+    "RelativePath": "Termek/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.TermekDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarlasiAdatokController",
+    "Method": "Post",
+    "RelativePath": "VasarlasiAdatok",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createOrModifyVasarlasiAdatokDto",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyVasarlasiAdatokDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.VasarlasiAdatokDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarlasiAdatokController",
+    "Method": "GetAll",
+    "RelativePath": "VasarlasiAdatok",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.VasarlasiAdatokDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarlasiAdatokController",
+    "Method": "Get",
+    "RelativePath": "VasarlasiAdatok/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.VasarlasiAdatokDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarlasiAdatokController",
+    "Method": "Put",
+    "RelativePath": "VasarlasiAdatok/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createOrModifyVasarlasiAdatokDto",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyVasarlasiAdatokDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.VasarlasiAdatokDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarlasiAdatokController",
+    "Method": "Delete",
+    "RelativePath": "VasarlasiAdatok/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.VasarlasiAdatokDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarloController",
+    "Method": "Post",
+    "RelativePath": "Vasarlo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createOrModifyVasarlo",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyVasarlo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.VasarloDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarloController",
+    "Method": "GetAll",
+    "RelativePath": "Vasarlo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarloController",
+    "Method": "Get",
+    "RelativePath": "Vasarlo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.JogosultsagDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarloController",
+    "Method": "Put",
+    "RelativePath": "Vasarlo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "createOrModifyVasarlo",
+        "Type": "Gearbox_Back_End.Dto.CreateOrModifyVasarlo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.VasarloDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gearbox_Back_End.Controllers.VasarloController",
+    "Method": "Delete",
+    "RelativePath": "Vasarlo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gearbox_Back_End.Dto.VasarloDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

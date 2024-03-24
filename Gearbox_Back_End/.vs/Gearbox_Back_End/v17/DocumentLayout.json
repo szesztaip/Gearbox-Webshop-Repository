@@ -1,0 +1,311 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\termekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\termekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\dto\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\dto\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\debugcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\debugcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\jogosultsagokcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\jogosultsagokcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\kategoriafajtakcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\kategoriafajtakcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\kosarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\kosarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\kosarkapcsolatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\kosarkapcsolatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\vasarlocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\vasarlocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\controllers\\vasarlasiadatokcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\controllers\\vasarlasiadatokcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\dto\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\dto\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\service\\iemailservices\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\service\\iemailservices\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\service\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|c:\\users\\szesz\\documents\\projektmunka\\gearbox-webshop-repository\\gearbox_back_end\\gearbox_back_end\\models\\gearboxdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD3F2E48-286E-4CAC-8543-A637A032A992}|Gearbox_Back_End\\Gearbox_Back_End.csproj|solutionrelative:gearbox_back_end\\models\\gearboxdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JogosultsagokController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\JogosultsagokController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\JogosultsagokController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\JogosultsagokController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\JogosultsagokController.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAAAIgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\EmailController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\EmailController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\EmailController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\EmailController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DebugController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\DebugController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\DebugController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\DebugController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\DebugController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Program.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Program.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Program.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TermekController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\TermekController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\TermekController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\TermekController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\TermekController.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAIAwwH4AAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dtos.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Dto\\Dtos.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Dto\\Dtos.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Dto\\Dtos.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Dto\\Dtos.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KategoriafajtakController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\KategoriafajtakController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\KategoriafajtakController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\KategoriafajtakController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\KategoriafajtakController.cs",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAIQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KosarController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\KosarController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\KosarController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\KosarController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\KosarController.cs",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAJkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "KosarKapcsolatController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\KosarKapcsolatController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\KosarKapcsolatController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\KosarKapcsolatController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\KosarKapcsolatController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAAAGsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VasarloController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\VasarloController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\VasarloController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\VasarloController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\VasarloController.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAAAJAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAHUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VasarlasiAdatokController.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\VasarlasiAdatokController.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Controllers\\VasarlasiAdatokController.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Controllers\\VasarlasiAdatokController.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Controllers\\VasarlasiAdatokController.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAI0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Token.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Dto\\Token.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Dto\\Token.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Dto\\Token.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Dto\\Token.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Service\\IEmailServices\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Service\\IEmailServices\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Service\\IEmailServices\\IEmailService.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Service\\IEmailServices\\IEmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Service\\EmailService.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Service\\EmailService.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Service\\EmailService.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Service\\EmailService.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GearboxDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Models\\GearboxDbContext.cs",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\Models\\GearboxDbContext.cs",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\Models\\GearboxDbContext.cs",
+              "RelativeToolTip": "Gearbox_Back_End\\Models\\GearboxDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T13:07:57.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\appsettings.json",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\appsettings.json",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\appsettings.json",
+              "RelativeToolTip": "Gearbox_Back_End\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-20T13:07:57.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Gearbox_Back_End\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\szesz\\Documents\\Projektmunka\\Gearbox-Webshop-Repository\\Gearbox_Back_End\\Gearbox_Back_End\\appsettings.Development.json",
+              "RelativeToolTip": "Gearbox_Back_End\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-20T13:07:57.639Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
