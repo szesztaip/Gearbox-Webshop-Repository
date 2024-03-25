@@ -7,23 +7,24 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center; /* Középre igazítja a kártyákat */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 6 egyenlő méretű oszlop */
   gap: 20px; /* Helyet hagy a kártyák között */
-  margin-top: 70px;
+  grid-gap: 1rem;
 }
 
 .card {
-    position: relative;
-    width: 300px;
-    height: 380px;
-    background: #0000;
-    display: flex;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
-    z-index: 1; 
-  }
+  position: relative;
+  width: 300px;
+  height: 380px;
+  background: #0000;
+  display: flex;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 1; 
+}
+
   .card:hover {
     width: 600px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4); 
@@ -157,13 +158,12 @@
 
   @media (max-width: 768px) {
     .container {
-      flex-direction: column;
+      flex-direction: column-reverse ;
     }
     .card {
       width: 100%; /* Teljes szélesség kisebb képernyőkön */
       margin-bottom: 20px; /* Távolság a kártyák között */
     }
   }
-  
 
  

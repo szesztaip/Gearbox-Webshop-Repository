@@ -43,8 +43,6 @@ const Home = () => {
   return (
       <div>
           <div>
-
-              <h1>Data:</h1>
               <div className="card-container">
                 {data.map((cardData, index) => (
                 <CardComponent key={index} cardData={cardData} />

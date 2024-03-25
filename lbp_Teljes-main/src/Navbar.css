@@ -43,6 +43,7 @@
 /* Dropdown Styles */
 .dropdown {
   position: relative; /* Adjunk hozzá relatív pozíciót a dropdown-hoz */
+  color: white;
 }
 
 .dropdown-content {

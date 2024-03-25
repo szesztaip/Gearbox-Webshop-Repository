@@ -51,7 +51,7 @@ function Navbar() {
           <li><Link to="/">Home</Link></li>
           <li className="dropdown">Women
             <div className="dropdown-content">
-              <Link to="/women/shoes">Shoes</Link>
+              <Link to="/shoes">Shoes</Link>
               <Link to="/women/shirts">Shirts</Link>
               <Link to="/women/pants">Pants</Link>
             </div>
