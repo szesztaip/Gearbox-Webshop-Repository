@@ -1,11 +1,12 @@
 ﻿using Gearbox_Back_End.Dto;
 using Gearbox_Back_End.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gearbox_Back_End.Controllers
 {
     [ApiController]
-    [Route("/Besorolas")]
+    [Route("/Besorolas"), Authorize(Roles = "Admin")]
     public class BesorolasController : ControllerBase
     {
         [HttpPost]

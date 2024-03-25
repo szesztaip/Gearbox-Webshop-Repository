@@ -19,6 +19,9 @@
     <Compile Update="Windows\Product_Controllers\ProductAdd.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\User_Controllers\UserMainPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Login.xaml">
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\Product_Controllers\ProductAdd.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\User_Controllers\UserMainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

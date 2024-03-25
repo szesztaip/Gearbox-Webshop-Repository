@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GearBoxMaintainApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c6602e285cfbca726ba9d0ce7bbb0808cc397a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GearBoxMaintainApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GearBoxMaintainApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

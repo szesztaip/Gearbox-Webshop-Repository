@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GearBoxMaintainApp.Windows.Product"
         mc:Ignorable="d"
-        Title="ProductAdd" Height="450" Width="300">
+        Title="ProductAdd" Height="480" Width="300">
     <Grid>
         <StackPanel>
             <StackPanel Orientation="Horizontal" Margin="42 10 0 10">
