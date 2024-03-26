@@ -1,4 +1,5 @@
-﻿using GearBoxMaintainApp.Dtos;
+﻿using Gearbox_Back_End.Models;
+using GearBoxMaintainApp.Dtos;
 using GearBoxMaintainApp.Tool_Classes;
 using System;
 using System.Collections.Generic;
@@ -44,7 +45,17 @@ namespace GearBoxMaintainApp.Windows.Product_Controllers
                     Category.SelectedIndex = i;
                 }
             }
-            
+            List<Besorola> besorolas = new List<Besorola>();
+            besorolas = CRUD.GetBesorolas(tok);
+            for (int i = 0; i < besorolas.Count; i++)
+            {
+                SortType.Items.Add(besorolas[i].Nev + " | " + besorolas[i].Id);
+                if (besorolas[i].Id == termek.BesorolasId)
+                {
+                    SortType.SelectedIndex = i;
+                }
+            }
+
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
@@ -52,6 +63,7 @@ namespace GearBoxMaintainApp.Windows.Product_Controllers
             TermekDto termek = new TermekDto();
             termek.nev = Name.Text;
             termek.kategoria = Convert.ToInt32((Category.SelectedItem as String).Split('-')[0].Trim());
+            termek.besorolasId = Guid.Parse((SortType.SelectedItem as String).Split('|')[1].Trim());
             termek.meret = Size.Text;
             termek.leiras = Discription.Text;
             if (int.TryParse(Amount.Text, out int s))

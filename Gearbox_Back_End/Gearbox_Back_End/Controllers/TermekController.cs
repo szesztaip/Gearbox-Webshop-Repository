@@ -11,7 +11,7 @@ namespace Gearbox_Back_End.Controllers
     public class TermekController : ControllerBase
     {
 
-        [HttpPost]
+        [HttpPost,Authorize(Roles = "Admin")]
         public ActionResult<TermekDto> Post(CreateOrModifyTermek createOrModifyTermek)
         {
             var UjTermek = new Termek
@@ -59,7 +59,7 @@ namespace Gearbox_Back_End.Controllers
             }
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}"), Authorize(Roles = "Admin")]
         public ActionResult<TermekDto> Get(Guid id)
         {
             using (var context = new GearBoxDbContext())
@@ -113,7 +113,7 @@ namespace Gearbox_Back_End.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}"), Authorize(Roles = "Admin")]
         public ActionResult<TermekDto> Put(Guid id, CreateOrModifyTermek createOrModifyTermek)
         {
             using (var context = new GearBoxDbContext())

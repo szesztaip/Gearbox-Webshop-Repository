@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GearBoxMaintainApp"
         mc:Ignorable="d"
-        Title="Login" Height="230" Width="420">
+        Title="Login" Height="250" Width="420">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>

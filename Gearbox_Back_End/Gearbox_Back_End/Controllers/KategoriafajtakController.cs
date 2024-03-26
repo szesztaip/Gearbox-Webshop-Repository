@@ -1,5 +1,6 @@
 ﻿using Gearbox_Back_End.Dto;
 using Gearbox_Back_End.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gearbox_Back_End.Controllers
@@ -8,7 +9,7 @@ namespace Gearbox_Back_End.Controllers
     [Route("/Kategoriafajtak")]
     public class KategoriafajtakController : ControllerBase
     {
-        [HttpPost]
+        [HttpPost, Authorize(Roles = "Admin")]
         public ActionResult<KategoriafajtakDto> Post(CreateOrModifyKategoriakDto createOrModifyJogosultsagok)
         {
             var UjKategoria = new Kategoriafajtak
@@ -73,7 +74,7 @@ namespace Gearbox_Back_End.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}"), Authorize(Roles = "Admin")]
         public ActionResult<KategoriafajtakDto> Put(int id, CreateOrModifyKategoriakDto createOrModifyJogosultsagok)
         {
             using (var context = new GearBoxDbContext())
@@ -101,7 +102,7 @@ namespace Gearbox_Back_End.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}"), Authorize(Roles = "Admin")]
         public ActionResult<KategoriafajtakDto> Delete(int id)
         {
             using (var context = new GearBoxDbContext())

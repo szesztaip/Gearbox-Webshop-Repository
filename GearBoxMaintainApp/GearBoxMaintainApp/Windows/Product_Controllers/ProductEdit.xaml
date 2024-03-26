@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GearBoxMaintainApp.Windows.Product_Controllers"
         mc:Ignorable="d"
-        Title="ProductEdit" Height="420" Width="300">
+        Title="ProductEdit" Height="480" Width="300">
     <Grid>
         <StackPanel>
         <StackPanel Orientation="Horizontal" Margin="42 10 0 10">
@@ -16,7 +16,11 @@
             <Label Content="Category : " FontSize="20"/>
             <ComboBox x:Name="Category" Width="150"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="60 0 0 10">
+            <StackPanel Orientation="Horizontal" Margin="14 0 0 10">
+                <Label Content="SortType : " FontSize="20"/>
+                <ComboBox x:Name="SortType" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="60 0 0 10">
             <Label Content="Size : " FontSize="20"/>
             <TextBox x:Name="Size" Width="150"/>
         </StackPanel>
