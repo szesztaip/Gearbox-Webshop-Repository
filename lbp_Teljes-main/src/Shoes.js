@@ -1,10 +1,11 @@
+// Shoes.jsx
 import React, { useState, useEffect } from 'react';
-import { useCart } from './CartContext'; // Feltételezve, hogy van egy CartContext
+import { useCart } from './CartContext'; // Kosár kontextus importálása
 
 function Shoes() {
   const { addToCart } = useCart();
   const [shoes, setShoes] = useState([]);
-  const [categoryData, setCategoryData] = useState({}); // Állapot az aktuális kategória adatok tárolására
+  const [categoryData, setCategoryData] = useState({});
 
   useEffect(() => {
     const fetchShoes = async () => {
@@ -25,7 +26,6 @@ function Shoes() {
     fetchShoes();
   }, []);
 
-  // Új HTTP kérés az egyes kategóriák lekérésére a kategoriaId alapján
   const fetchCategory = async (categoryId) => {
     try {
       const response = await fetch(`https://localhost:7063/Kategoriafajtak/${categoryId}`);
@@ -33,7 +33,7 @@ function Shoes() {
         const categoryData = await response.json();
         setCategoryData((prevData) => ({
           ...prevData,
-          [categoryId]: categoryData.kategoriaNev // Kategória név tárolása az állapotba
+          [categoryId]: categoryData.kategoriaNev
         }));
       } else {
         throw new Error('API response was not ok.');
@@ -43,7 +43,6 @@ function Shoes() {
     }
   };
 
-  // Komponens újrarajzolásakor a kategoriaId alapján fetcheljük az adatokat
   useEffect(() => {
     shoes.forEach((shoe) => {
       fetchCategory(shoe.kategoriaId);
@@ -60,7 +59,7 @@ function Shoes() {
                 <img src={shoe.kep} alt={shoe.nev} />
               </div>
               <div className="details">
-                <h2>{categoryData[shoe.kategoriaId]}</h2> {/* categoryData felhasználása */}
+                <h2>{categoryData[shoe.kategoriaId]}</h2>
                 <h4>Product Details</h4>
                 <p>{shoe.leiras}</p>
                 <h4>Size</h4>
@@ -69,13 +68,13 @@ function Shoes() {
                 </ul>
                 <div className="group">
                   <h2><sup>Ft</sup>{shoe.ar}<small>.99</small></h2>
-                  <button onClick={() => addToCart(shoe)}>Buy Now</button>
+                  <button onClick={() => addToCart(shoe)}>Buy Now</button> {/* Kosárhoz adás */}
                 </div>
               </div>
             </div>
           );
         } else {
-          return null; // Nem cipő kategóriájú termékek elhagyása
+          return null;
         }
       })}
     </div>

@@ -9,11 +9,16 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
+    console.log("CartContext: "+item)
     setCartItems((prevItems) => [...prevItems, item]);
   };
 
+  const removeFromCart = (id) => {
+    setCartItems((prevItems) => prevItems.filter(item => item.id !== id));
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
