@@ -36,13 +36,19 @@ namespace GearBoxMaintainApp.Windows.User_Controllers
         private void Create_Click(object sender, RoutedEventArgs e)
         {
             UserAdd user = new UserAdd(token);
-            user.Show();
-            this.Close();
+            user.ShowDialog();
+            DrGrid.ItemsSource = CRUD.GetVasarlok(token);
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DrGrid.SelectedItem != null)
+            {
+                UserEdit edit = new UserEdit(token, DrGrid.SelectedItem as Vasarlo);
+                edit.ShowDialog();
+                DrGrid.ItemsSource = CRUD.GetVasarlok(token);
+            }
+            
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)

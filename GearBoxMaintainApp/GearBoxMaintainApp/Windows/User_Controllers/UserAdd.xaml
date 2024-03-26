@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GearBoxMaintainApp.Windows.User_Controllers"
         mc:Ignorable="d"
-        Title="UserAdd" Height="170" Width="200">
+        Title="UserAdd" Height="260" Width="230">
     <Grid>
-        <StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Label Content="Felhasználónév :"/>
+        <StackPanel Margin="10 10 10 10">
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Username :"/>
                 <TextBox x:Name="Username" Width="100"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Label Content="Emailcím :"/>
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Email Address :"/>
                 <TextBox x:Name="Email" Width="100"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Label Content="Telefonszam :"/>
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Phone number :"/>
                 <TextBox x:Name="Phonenumber" Width="100"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Label Content="Jelszo :"/>
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Password :"/>
                 <TextBox x:Name="Password" Width="100"/>
             </StackPanel>
             <StackPanel Height="10"/>

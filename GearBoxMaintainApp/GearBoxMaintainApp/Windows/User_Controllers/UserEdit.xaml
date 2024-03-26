@@ -1,0 +1,33 @@
+﻿<Window x:Class="GearBoxMaintainApp.Windows.User_Controllers.UserEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GearBoxMaintainApp.Windows.User_Controllers"
+        mc:Ignorable="d"
+        Title="UserEdit" Height="250" Width="270">
+    <Grid>
+        <StackPanel Margin="10 10 10 10">
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Username :"/>
+                <TextBox x:Name="Username" Width="100"/>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Email Address :"/>
+                <TextBox x:Name="Email" Width="100"/>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Phone number :"/>
+                <TextBox x:Name="Phonenumber" Width="100"/>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Permissions :"/>
+                <ComboBox x:Name="Permissions" Width="100" />
+            </StackPanel>
+            <StackPanel Height="10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button x:Name="Edit" Content="Edit" Width="100" Click="Edit_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

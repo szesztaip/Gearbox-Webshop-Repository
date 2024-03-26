@@ -194,7 +194,7 @@ namespace GearBoxMaintainApp.Tool_Classes
             }
         }
 
-        public static string PutUser(string token, Guid id, TermekDto vasarlo)
+        public static string PutUser(string token, Guid id, VasarloDto vasarlo)
         {
             string url = "Vasarlo";
             Connection connection = new Connection();
@@ -234,6 +234,31 @@ namespace GearBoxMaintainApp.Tool_Classes
                 return x.Message;
             }
 
+        }
+
+        #endregion
+
+        #region Jogosultsagok
+
+        public static List<Jogosultsagok> GetJogok(string token)
+        {
+            string url = "Jogosultsag";
+            Connection connection = new Connection();
+            WebClient webClient = new WebClient();
+            webClient.Headers[HttpRequestHeader.ContentType] = "application/json; charset=utf-8";
+            webClient.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
+            webClient.Encoding = Encoding.UTF8;
+
+            try
+            {
+                string result = webClient.DownloadString(connection.Url() + url);
+                return JsonConvert.DeserializeObject<List<Jogosultsagok>>(result).ToList();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Hiba lépett fel a művelet során : " + x.Message);
+                return new List<Jogosultsagok>();
+            }
         }
 
         #endregion

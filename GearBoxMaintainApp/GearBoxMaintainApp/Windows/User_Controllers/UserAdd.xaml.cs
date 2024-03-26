@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using GearBoxMaintainApp.Dtos;
+using GearBoxMaintainApp.Tool_Classes;
 
 namespace GearBoxMaintainApp.Windows.User_Controllers
 {
@@ -37,7 +38,7 @@ namespace GearBoxMaintainApp.Windows.User_Controllers
                 jelszo = Password.Text
             };
 
-
+            MessageBox.Show(CRUD.Registration(token,regisztracio));
 
         }
     }

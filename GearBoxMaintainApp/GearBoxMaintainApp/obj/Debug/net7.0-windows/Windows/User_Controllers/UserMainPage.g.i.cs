@@ -101,8 +101,7 @@ namespace GearBoxMaintainApp.Windows.User_Controllers {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GearBoxMaintainApp;V1.0.0.0;component/windows/user_controllers/usermainpage.xaml" +
-                    "", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GearBoxMaintainApp;component/windows/user_controllers/usermainpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Windows\User_Controllers\UserMainPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

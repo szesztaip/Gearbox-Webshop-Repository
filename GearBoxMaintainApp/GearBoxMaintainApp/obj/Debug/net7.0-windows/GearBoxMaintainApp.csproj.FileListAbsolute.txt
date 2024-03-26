@@ -111,3 +111,9 @@ C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintain
 C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\ref\GearBoxMaintainApp.dll
 C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserMainPage.g.cs
 C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserMainPage.baml
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserAdd.g.cs
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserMainPage.g.cs
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserAdd.baml
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserMainPage.baml
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserEdit.g.cs
+C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserEdit.baml

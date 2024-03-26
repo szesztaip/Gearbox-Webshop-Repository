@@ -118,7 +118,6 @@ namespace Gearbox_Back_End.Controllers
                             valtoztatando.FelhasznaloNev = createOrModifyVasarlo.Felhasznalonev;
                             valtoztatando.Telefonszam = createOrModifyVasarlo.Telefonszam;
                             valtoztatando.Email = createOrModifyVasarlo.Email;
-                            valtoztatando.Hash = BCrypt.Net.BCrypt.HashPassword(createOrModifyVasarlo.Jelszo);
                             valtoztatando.Jogosultsag = createOrModifyVasarlo.Jogosultsag;
 
                             context.Vasarlos.Update(valtoztatando);
