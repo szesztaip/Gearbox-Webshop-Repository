@@ -1,4 +1,3 @@
-// Shoes.jsx
 import React, { useState, useEffect } from 'react';
 import { useCart } from './CartContext'; // Kosár kontextus importálása
 
@@ -49,6 +48,18 @@ function Shoes() {
     });
   }, [shoes]);
 
+  const handleBuyNow = (shoe) => {
+    // Ellenőrizze, hogy van-e userToken a localStorage-ban
+    const userToken = localStorage.getItem('userToken');
+    if (!userToken) {
+      // Ha nincs, akkor átirányítás a Login oldalra
+      window.location.href = '/login';
+      return;
+    }
+    // Ha van userToken, akkor hozzáadja a terméket a kosárhoz
+    addToCart(shoe);
+  };
+
   return (
     <div className="container">
       {shoes.map((shoe) => {
@@ -68,7 +79,7 @@ function Shoes() {
                 </ul>
                 <div className="group">
                   <h2><sup>Ft</sup>{shoe.ar}<small>.99</small></h2>
-                  <button onClick={() => addToCart(shoe)}>Buy Now</button> {/* Kosárhoz adás */}
+                  <button onClick={() => handleBuyNow(shoe)}>Buy Now</button> {/* Kosárhoz adás */}
                 </div>
               </div>
             </div>
