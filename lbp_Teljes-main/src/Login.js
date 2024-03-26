@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import jwt_decode from './jwt_decode'; // importáld a jwt_decode modult
+
 import './Login.css';
 
 const Login = ({ isLoggedIn, toggleLogin = () => {} }) => {
@@ -55,14 +57,14 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) => {
           jelszo,
         }),
       });
-
+  
       if (response.ok) {
         console.log("Registration successful");
         setUserName(felhasznalonev);
         setEmail(email);
         setPassword(jelszo);
         setPhoneNumber(telefonszam);
-
+        handleLogin(e);
         // Sikeres regisztráció esetén küldjünk egy üdvözlő e-mailt
         try {
           const emailResponse = await fetch("https://localhost:7063/Email", {
@@ -84,10 +86,37 @@ const Login = ({ isLoggedIn, toggleLogin = () => {} }) => {
         } catch (error) {
           console.error("An error occurred while sending welcome email:", error);
         }
-
-        // Sikeres regisztráció után bejelentkeztetjük a felhasználót
-        handleLogin(e);
-
+  
+        // Sikeres regisztráció után dekódold a JWT tokent
+        const userToken = localStorage.getItem("userToken");
+        if (userToken) {
+          const decodedToken = jwt_decode(userToken);
+          console.log("Decoded token:", decodedToken);
+          // Kinyerjük az ameidentifier-t a decoded tokentől
+          const nameidentifier = decodedToken.nameidentifier;
+          // Elküldjük az ameidentifier-t az endpointon keresztül
+          try {
+            const cartConnectionResponse = await fetch("https://localhost:7063/KosarKapcsolat", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                vasarloId: nameidentifier,
+              }),
+            });
+            if (cartConnectionResponse.ok) {
+              console.log("Cart connection successful");
+            } else {
+              console.error("Failed to establish cart connection:", cartConnectionResponse.status);
+            }
+          } catch (error) {
+            console.error("An error occurred while establishing cart connection:", error);
+          }
+        } else {
+          console.error("User token not found in localStorage");
+        }
+  
         navigate("/");
       } else {
         console.error("Registration failed, response status:", response.status);

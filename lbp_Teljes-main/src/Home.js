@@ -7,7 +7,6 @@ const Home = () => {
     const [data, setData] = useState([]);
   
     const CardComponent = ({ cardData }) => {
-      console.log(cardData.leiras)
       return (
         <div className="card">
           <div className='title'>
@@ -30,7 +29,6 @@ const Home = () => {
             throw new Error('Network response was not ok');
           }
           const jsonData = await response.json();
-          console.log(jsonData)
           setData(jsonData);
         } catch (error) {
           console.log(error)
@@ -43,8 +41,6 @@ const Home = () => {
   return (
       <div>
           <div>
-
-              <h1>Data:</h1>
               <div className="card-container">
                 {data.map((cardData, index) => (
                 <CardComponent key={index} cardData={cardData} />

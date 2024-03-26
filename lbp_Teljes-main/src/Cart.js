@@ -1,12 +1,12 @@
+// Cart.jsx
 import React, { useState } from 'react';
 import './Cart.css'; // Feltételezve, hogy a stílusokat a Cart.css fájlban tartod
 
 const Cart = () => {
-  const [products, setProducts] = useState([
-    // Inicializáld a products állapotot kezdeti értékekkel
-  ]);
+  const [products, setProducts] = useState([]);
 
   const updateQuantity = (id, quantity) => {
+    if (products.length === 0) return; // Ellenőrizd, hogy a termékek tömb üres-e
     const updatedProducts = products.map(product => {
       if (product.id === id) {
         return { ...product, quantity };
@@ -17,11 +17,13 @@ const Cart = () => {
   };
 
   const removeItem = (id) => {
+    if (products.length === 0) return; // Ellenőrizd, hogy a termékek tömb üres-e
     const filteredProducts = products.filter(product => product.id !== id);
     setProducts(filteredProducts);
   };
 
   const calculateTotal = () => {
+    if (products.length === 0) return 0; // Ellenőrizd, hogy a termékek tömb üres-e
     const subtotal = products.reduce((acc, product) => acc + (product.price * product.quantity), 0);
     const tax = subtotal * 0.05;
     const shipping = subtotal > 0 ? 15.00 : 0;
