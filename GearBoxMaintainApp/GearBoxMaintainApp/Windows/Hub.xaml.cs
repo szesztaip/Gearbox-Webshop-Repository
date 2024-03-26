@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GearBoxMaintainApp.Windows.User_Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,6 +31,13 @@ namespace GearBoxMaintainApp.Windows
         {
             ProductMain openproducteditor = new ProductMain(tok);
             openproducteditor.Show();
+            this.Close();
+        }
+
+        private void Userconnector_Click(object sender, RoutedEventArgs e)
+        {
+            UserMainPage page = new UserMainPage(tok);
+            page.Show();
             this.Close();
         }
     }

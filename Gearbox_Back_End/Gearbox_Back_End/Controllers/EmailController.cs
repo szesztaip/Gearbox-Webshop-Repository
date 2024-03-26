@@ -17,8 +17,17 @@ namespace Gearbox_Back_End.Controllers
         [HttpPost]
         public IActionResult SendEmail(EmailDto request)
         {
-            emailService.SendEmail(request);
-            return Ok("Emailküldés sikeresen megtörtént");
+            try
+            {
+                emailService.SendEmail(request);
+                return Ok("Emailküldés sikeresen megtörtént");
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500,e.Message);
+            }
+            
         }
     }
 }

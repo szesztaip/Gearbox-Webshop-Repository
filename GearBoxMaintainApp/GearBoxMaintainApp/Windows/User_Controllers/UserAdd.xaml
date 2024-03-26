@@ -1,0 +1,33 @@
+﻿<Window x:Class="GearBoxMaintainApp.Windows.User_Controllers.UserAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GearBoxMaintainApp.Windows.User_Controllers"
+        mc:Ignorable="d"
+        Title="UserAdd" Height="170" Width="200">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Felhasználónév :"/>
+                <TextBox x:Name="Username" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Emailcím :"/>
+                <TextBox x:Name="Email" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Telefonszam :"/>
+                <TextBox x:Name="Phonenumber" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Jelszo :"/>
+                <TextBox x:Name="Password" Width="100"/>
+            </StackPanel>
+            <StackPanel Height="10"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button x:Name="Add" Content="Add" Width="100" Click="Add_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

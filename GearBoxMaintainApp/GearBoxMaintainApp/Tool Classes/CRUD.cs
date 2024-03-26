@@ -149,5 +149,93 @@ namespace GearBoxMaintainApp.Tool_Classes
             }
         }
         #endregion
+
+        #region Felhasznalok
+
+        public static List<Vasarlo> GetVasarlok(string token)
+        {
+            string url = "Vasarlo";
+            Connection connection = new Connection();
+            WebClient webClient = new WebClient();
+            webClient.Headers[HttpRequestHeader.ContentType] = "application/json; charset=utf-8";
+            webClient.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
+            webClient.Encoding = Encoding.UTF8;
+
+            try
+            {
+                string result = webClient.DownloadString(connection.Url() + url);
+                return JsonConvert.DeserializeObject<List<Vasarlo>>(result).ToList();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Hiba lépett fel a művelet során : " + x.Message);
+                return new List<Vasarlo>();
+            }
+        }
+
+        public static string Registration(string token, RegisztracioDto vasarlo)
+        {
+            string url = "regisztracio";
+            Connection connection = new Connection();
+            WebClient webClient = new WebClient();
+            webClient.Headers[HttpRequestHeader.ContentType] = "application/json; charset=utf-8";
+            webClient.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
+            webClient.Encoding = Encoding.UTF8;
+
+            try
+            {
+                string result = webClient.UploadString(connection.Url() + url, "POST", JsonConvert.SerializeObject(vasarlo));
+                return result;
+            }
+            catch (Exception x)
+            {
+
+                return x.Message;
+            }
+        }
+
+        public static string PutUser(string token, Guid id, TermekDto vasarlo)
+        {
+            string url = "Vasarlo";
+            Connection connection = new Connection();
+            WebClient webClient = new WebClient();
+            webClient.Headers[HttpRequestHeader.ContentType] = "application/json; charset=utf-8";
+            webClient.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
+            webClient.Encoding = Encoding.UTF8;
+
+            try
+            {
+                string result = webClient.UploadString(connection.Url() + url + $"/{id}", "PUT", JsonConvert.SerializeObject(vasarlo));
+                return result;
+            }
+            catch (Exception x)
+            {
+
+                return x.Message;
+            }
+        }
+
+        public static string DeleteUser(string token, Guid id)
+        {
+            string url = "Vasarlo";
+            Connection connection = new Connection();
+            WebClient webClient = new WebClient();
+            webClient.Headers[HttpRequestHeader.ContentType] = "application/json; charset=utf-8";
+            webClient.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
+            webClient.Encoding = Encoding.UTF8;
+            try
+            {
+                string result = webClient.UploadString(connection.Url() + url + $"/{id}", "Delete", "");
+                return result;
+            }
+            catch (Exception x)
+            {
+
+                return x.Message;
+            }
+
+        }
+
+        #endregion
     }
 }

@@ -18,5 +18,6 @@
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Button x:Name="Productconnector" Content="Product Maintain" Width="100" Height="30" Click="Productconnector_Click"/>
+        <Button x:Name="Userconnector" Content="User Maintain" Width="100" Height="30" Grid.Column="1" Click="Userconnector_Click"/>
     </Grid>
 </Window>

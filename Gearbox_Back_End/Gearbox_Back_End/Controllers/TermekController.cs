@@ -14,167 +14,213 @@ namespace Gearbox_Back_End.Controllers
         [HttpPost,Authorize(Roles = "Admin")]
         public ActionResult<TermekDto> Post(CreateOrModifyTermek createOrModifyTermek)
         {
-            var UjTermek = new Termek
+            try
             {
-                Id = new Guid(),
-                Nev = createOrModifyTermek.Nev,
-                KategoriaId = createOrModifyTermek.Kategoria,
-                BesorolasId = createOrModifyTermek.BesorolasId,
-                Meret = createOrModifyTermek.Meret,
-                Leiras = createOrModifyTermek.Leiras,
-                Db = createOrModifyTermek.Db,
-                Ar = createOrModifyTermek.Ar,
-                VanEraktaron = createOrModifyTermek.VanEraktaron,
-                Kep = createOrModifyTermek.Kep
+                var UjTermek = new Termek
+                {
+                    Id = new Guid(),
+                    Nev = createOrModifyTermek.Nev,
+                    KategoriaId = createOrModifyTermek.Kategoria,
+                    BesorolasId = createOrModifyTermek.BesorolasId,
+                    Meret = createOrModifyTermek.Meret,
+                    Leiras = createOrModifyTermek.Leiras,
+                    Db = createOrModifyTermek.Db,
+                    Ar = createOrModifyTermek.Ar,
+                    VanEraktaron = createOrModifyTermek.VanEraktaron,
+                    Kep = createOrModifyTermek.Kep
 
-            };
-            using (var context = new GearBoxDbContext())
-            {
-                if (context != null)
+                };
+                using (var context = new GearBoxDbContext())
                 {
-                    context.Termeks.Add(UjTermek);
-                    context.SaveChanges();
-                    return StatusCode(201, "Az adatok sikeresen eltárolva!");
-                }
-                else
-                {
-                    return StatusCode(406, "Nem megfeleő az adat formátuma!");
+                    if (context != null)
+                    {
+                        context.Termeks.Add(UjTermek);
+                        context.SaveChanges();
+                        return StatusCode(201, "Az adatok sikeresen eltárolva!");
+                    }
+                    else
+                    {
+                        return StatusCode(406, "Nem megfeleő az adat formátuma!");
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpGet]
         public ActionResult<TermekDto> GetAll()
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    return Ok(context.Termeks.ToList());
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
+                    if (context != null)
+                    {
+                        return Ok(context.Termeks.ToList());
+                    }
+                    else
+                    {
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpGet("{id}"), Authorize(Roles = "Admin")]
         public ActionResult<TermekDto> Get(Guid id)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Termeks.FirstOrDefault(x => x.Id == id);
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett != null)
+                    var kerdezett = context.Termeks.FirstOrDefault(x => x.Id == id);
+
+                    if (context != null)
                     {
-                        return Ok(kerdezett);
+                        if (kerdezett != null)
+                        {
+                            return Ok(kerdezett);
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett termék nem létezik, vagy nincs eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett termék nem létezik, vagy nincs eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
                 }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
-
-
             }
+            catch (Exception e)
+            {
+                return StatusCode(500,e.Message);
+            }
+            
         }
 
         [HttpGet("{name}")]
         public ActionResult<TermekDto> Search(string name)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Termeks.Where(x=>x.Nev.Contains(name)).ToList();
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett.Count > 0)
+                    var kerdezett = context.Termeks.Where(x => x.Nev.Contains(name)).ToList();
+
+                    if (context != null)
                     {
-                        return Ok(kerdezett);
+                        if (kerdezett.Count > 0)
+                        {
+                            return Ok(kerdezett);
+                        }
+                        else
+                        {
+                            return StatusCode(404, "Nincs ilyen termék!");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "Nincs ilyen termék!");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
 
 
+                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500,e.Message);
+            }
+            
         }
 
         [HttpPut("{id}"), Authorize(Roles = "Admin")]
         public ActionResult<TermekDto> Put(Guid id, CreateOrModifyTermek createOrModifyTermek)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    var valtoztatando = context.Termeks.FirstOrDefault(x => x.Id == id);
-                    if (valtoztatando != null)
+                    if (context != null)
                     {
-                        valtoztatando.Nev = createOrModifyTermek.Nev;
-                        valtoztatando.KategoriaId = createOrModifyTermek.Kategoria;
-                        valtoztatando.BesorolasId = createOrModifyTermek.BesorolasId;
-                        valtoztatando.Meret = createOrModifyTermek.Meret;
-                        valtoztatando.Leiras = createOrModifyTermek.Leiras;
-                        valtoztatando.Db = createOrModifyTermek.Db;
-                        valtoztatando.Ar = createOrModifyTermek.Ar;
-                        valtoztatando.VanEraktaron = createOrModifyTermek.VanEraktaron;
-                        valtoztatando.Kep = createOrModifyTermek.Kep;
+                        var valtoztatando = context.Termeks.FirstOrDefault(x => x.Id == id);
+                        if (valtoztatando != null)
+                        {
+                            valtoztatando.Nev = createOrModifyTermek.Nev;
+                            valtoztatando.KategoriaId = createOrModifyTermek.Kategoria;
+                            valtoztatando.BesorolasId = createOrModifyTermek.BesorolasId;
+                            valtoztatando.Meret = createOrModifyTermek.Meret;
+                            valtoztatando.Leiras = createOrModifyTermek.Leiras;
+                            valtoztatando.Db = createOrModifyTermek.Db;
+                            valtoztatando.Ar = createOrModifyTermek.Ar;
+                            valtoztatando.VanEraktaron = createOrModifyTermek.VanEraktaron;
+                            valtoztatando.Kep = createOrModifyTermek.Kep;
 
-                        context.Termeks.Update(valtoztatando);
-                        context.SaveChanges();
-                        return Ok("Sikeres adatváltoztatás!");
+                            context.Termeks.Update(valtoztatando);
+                            context.SaveChanges();
+                            return Ok("Sikeres adatváltoztatás!");
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett termék nem létezik, vagy nincs eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett termék nem létezik, vagy nincs eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
                 }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpDelete("{id}"),Authorize(Roles ="Admin")]
         public ActionResult<TermekDto> Delete(Guid id)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Termeks.FirstOrDefault(x => x.Id == id);
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett != null)
+                    var kerdezett = context.Termeks.FirstOrDefault(x => x.Id == id);
+
+                    if (context != null)
                     {
-                        context.Termeks.Remove(kerdezett);
-                        context.SaveChanges();
-                        return Ok("A termék eltávolítása sikeresen megtörtént");
+                        if (kerdezett != null)
+                        {
+                            context.Termeks.Remove(kerdezett);
+                            context.SaveChanges();
+                            return Ok("A termék eltávolítása sikeresen megtörtént");
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett termék eddig sem létezett, vagy nem volt eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett termék eddig sem létezett, vagy nem volt eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
 
+                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
     }
 }

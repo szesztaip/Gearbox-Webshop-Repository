@@ -12,142 +12,182 @@ namespace Gearbox_Back_End.Controllers
         [HttpPost]
         public ActionResult<KosarDto> Post(Guid termekazon,Guid kosarazon,CreateOrModifyKosar createOrModifyKosar)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    var termek = context.Termeks.FirstOrDefault(x=>x.Id == termekazon);
-                    if (termek == null)
+                    if (context != null)
                     {
-                        return NotFound("Nincs ilyen termék!");
+                        var termek = context.Termeks.FirstOrDefault(x => x.Id == termekazon);
+                        if (termek == null)
+                        {
+                            return NotFound("Nincs ilyen termék!");
+                        }
+                        var UjKosar = new Kosar
+                        {
+                            Id = new Guid(),
+                            TermekId = termek.Id,
+                            TermekNev = termek.Nev,
+                            Db = createOrModifyKosar.Db,
+                            TermekAr = termek.Ar * createOrModifyKosar.Db,
+                            KosarId = kosarazon
+
+                        };
+
+                        context.Kosars.Add(UjKosar);
+                        context.SaveChanges();
+                        return StatusCode(201, "Az adatok sikeresen eltárolva!");
                     }
-                    var UjKosar = new Kosar
+                    else
                     {
-                        Id = new Guid(),
-                        TermekId = termek.Id,
-                        TermekNev = termek.Nev,
-                        Db = createOrModifyKosar.Db,
-                        TermekAr = termek.Ar*createOrModifyKosar.Db,
-                        KosarId = kosarazon
-
-                    };
-
-                    context.Kosars.Add(UjKosar);
-                    context.SaveChanges();
-                    return StatusCode(201, "Az adatok sikeresen eltárolva!");
-                }
-                else
-                {
-                    return StatusCode(406, "Nem megfeleő az adat formátuma!");
+                        return StatusCode(406, "Nem megfeleő az adat formátuma!");
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpGet]
         public ActionResult<KosarDto> GetAll()
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    return Ok(context.Kosars.Include(x=>x.Termek).ToList());
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
+                    if (context != null)
+                    {
+                        return Ok(context.Kosars.Include(x => x.Termek).ToList());
+                    }
+                    else
+                    {
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+           
         }
 
         [HttpGet("{id}")]
         public ActionResult<KosarDto> Get(Guid id)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Kosars.Include(x=>x.Termek).FirstOrDefault(x=>x.Id==id);
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett != null)
+                    var kerdezett = context.Kosars.Include(x => x.Termek).FirstOrDefault(x => x.Id == id);
+
+                    if (context != null)
                     {
-                        return Ok(kerdezett);
+                        if (kerdezett != null)
+                        {
+                            return Ok(kerdezett);
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett kosár nem létezik, vagy nincs eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett kosár nem létezik, vagy nincs eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
 
 
+                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500,e.Message);
+            }
+            
         }
 
         [HttpPut("{id}")]
         public ActionResult<KosarDto> Put(Guid id,Guid termekazon, CreateOrModifyKosar createOrModifyKosar)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    var valtoztatando = context.Kosars.FirstOrDefault(x => x.Id == id);
-                    var termek = context.Termeks.FirstOrDefault(x => x.Id == termekazon);
-                    if (termek == null)
+                    if (context != null)
                     {
-                        return NotFound("Nincs ilyen termék!");
-                    }
-                    if (valtoztatando != null)
-                    {
-                        valtoztatando.TermekId = termek.Id;
-                        valtoztatando.TermekNev = termek.Nev;
-                        valtoztatando.Db = createOrModifyKosar.Db;
-                        valtoztatando.TermekAr = termek.Ar * createOrModifyKosar.Db;
+                        var valtoztatando = context.Kosars.FirstOrDefault(x => x.Id == id);
+                        var termek = context.Termeks.FirstOrDefault(x => x.Id == termekazon);
+                        if (termek == null)
+                        {
+                            return NotFound("Nincs ilyen termék!");
+                        }
+                        if (valtoztatando != null)
+                        {
+                            valtoztatando.TermekId = termek.Id;
+                            valtoztatando.TermekNev = termek.Nev;
+                            valtoztatando.Db = createOrModifyKosar.Db;
+                            valtoztatando.TermekAr = termek.Ar * createOrModifyKosar.Db;
 
-                        context.Kosars.Update(valtoztatando);
-                        context.SaveChanges();
-                        return Ok("Sikeres adatváltoztatás!");
+                            context.Kosars.Update(valtoztatando);
+                            context.SaveChanges();
+                            return Ok("Sikeres adatváltoztatás!");
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett kosár nem létezik, vagy nincs eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett kosár nem létezik, vagy nincs eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
                 }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpDelete("{id}")]
         public ActionResult<KosarDto> Delete(Guid id)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Kosars.FirstOrDefault(x => x.Id == id);
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett != null)
+                    var kerdezett = context.Kosars.FirstOrDefault(x => x.Id == id);
+
+                    if (context != null)
                     {
-                        context.Kosars.Remove(kerdezett);
-                        context.SaveChanges();
-                        return Ok("A kosár eltávolítása sikeresen megtörtént");
+                        if (kerdezett != null)
+                        {
+                            context.Kosars.Remove(kerdezett);
+                            context.SaveChanges();
+                            return Ok("A kosár eltávolítása sikeresen megtörtént");
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett kosár eddig sem létezett, vagy nem volt eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett kosár eddig sem létezett, vagy nem volt eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
 
+                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
     }
 }

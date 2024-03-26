@@ -77,7 +77,7 @@ namespace GearBoxMaintainApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GearBoxMaintainApp;V1.0.0.0;component/login.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GearBoxMaintainApp;component/login.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

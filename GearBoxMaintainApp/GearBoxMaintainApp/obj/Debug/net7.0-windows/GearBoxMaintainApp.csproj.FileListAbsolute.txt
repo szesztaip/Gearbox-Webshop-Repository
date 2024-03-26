@@ -109,3 +109,5 @@ C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintain
 C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\GearBoxMaintainApp.pdb
 C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\GearBoxMaintainApp.genruntimeconfig.cache
 C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\ref\GearBoxMaintainApp.dll
+C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserMainPage.g.cs
+C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\Windows\User_Controllers\UserMainPage.baml

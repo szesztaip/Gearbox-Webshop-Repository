@@ -13,132 +13,170 @@ namespace Gearbox_Back_End.Controllers
         [HttpPost]
         public ActionResult<VasarloDto> Post(CreateOrModifyVasarlo createOrModifyVasarlo)
         {
-            var UjVasarlo = new Vasarlo
+            try
             {
-                Id = new Guid(),
-                FelhasznaloNev = createOrModifyVasarlo.Felhasznalonev,
-                Telefonszam = createOrModifyVasarlo.Telefonszam,
-                Email = createOrModifyVasarlo.Email,
-                Hash = BCrypt.Net.BCrypt.HashPassword(createOrModifyVasarlo.Jelszo),
-                Jogosultsag = createOrModifyVasarlo.Jogosultsag
+                var UjVasarlo = new Vasarlo
+                {
+                    Id = new Guid(),
+                    FelhasznaloNev = createOrModifyVasarlo.Felhasznalonev,
+                    Telefonszam = createOrModifyVasarlo.Telefonszam,
+                    Email = createOrModifyVasarlo.Email,
+                    Hash = BCrypt.Net.BCrypt.HashPassword(createOrModifyVasarlo.Jelszo),
+                    Jogosultsag = createOrModifyVasarlo.Jogosultsag
 
-            };
-            using (var context = new GearBoxDbContext())
-            {
-                if (context != null)
+                };
+                using (var context = new GearBoxDbContext())
                 {
-                    context.Vasarlos.Add(UjVasarlo);
-                    context.SaveChanges();
-                    return StatusCode(201, "Az adatok sikeresen eltárolva!");
-                }
-                else
-                {
-                    return StatusCode(406, "Nem megfeleő az adat formátuma!");
+                    if (context != null)
+                    {
+                        context.Vasarlos.Add(UjVasarlo);
+                        context.SaveChanges();
+                        return StatusCode(201, "Az adatok sikeresen eltárolva!");
+                    }
+                    else
+                    {
+                        return StatusCode(406, "Nem megfeleő az adat formátuma!");
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpGet]
         public ActionResult<JogosultsagDto> GetAll()
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    return Ok(context.Vasarlos.ToList());
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
+                    if (context != null)
+                    {
+                        return Ok(context.Vasarlos.ToList());
+                    }
+                    else
+                    {
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpGet("{id}")]
         public ActionResult<JogosultsagDto> Get(Guid id)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Vasarlos.FirstOrDefault(x => x.Id == id);
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett != null)
+                    var kerdezett = context.Vasarlos.FirstOrDefault(x => x.Id == id);
+
+                    if (context != null)
                     {
-                        return Ok(kerdezett);
+                        if (kerdezett != null)
+                        {
+                            return Ok(kerdezett);
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett vásárló nem létezik, vagy nincs eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett vásárló nem létezik, vagy nincs eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
                 }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
-
-
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpPut("{id}")]
         public ActionResult<VasarloDto> Put(Guid id, CreateOrModifyVasarlo createOrModifyVasarlo)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    var valtoztatando = context.Vasarlos.FirstOrDefault(x => x.Id == id);
-                    if (valtoztatando != null)
+                    if (context != null)
                     {
-                        valtoztatando.FelhasznaloNev = createOrModifyVasarlo.Felhasznalonev;
-                        valtoztatando.Telefonszam = createOrModifyVasarlo.Telefonszam;
-                        valtoztatando.Email = createOrModifyVasarlo.Email;
-                        valtoztatando.Hash = BCrypt.Net.BCrypt.HashPassword(createOrModifyVasarlo.Jelszo);
-                        valtoztatando.Jogosultsag = createOrModifyVasarlo.Jogosultsag;
+                        var valtoztatando = context.Vasarlos.FirstOrDefault(x => x.Id == id);
+                        if (valtoztatando != null)
+                        {
+                            valtoztatando.FelhasznaloNev = createOrModifyVasarlo.Felhasznalonev;
+                            valtoztatando.Telefonszam = createOrModifyVasarlo.Telefonszam;
+                            valtoztatando.Email = createOrModifyVasarlo.Email;
+                            valtoztatando.Hash = BCrypt.Net.BCrypt.HashPassword(createOrModifyVasarlo.Jelszo);
+                            valtoztatando.Jogosultsag = createOrModifyVasarlo.Jogosultsag;
 
-                        context.Vasarlos.Update(valtoztatando);
-                        context.SaveChanges();
-                        return Ok("Sikeres adatváltoztatás!");
+                            context.Vasarlos.Update(valtoztatando);
+                            context.SaveChanges();
+                            return Ok("Sikeres adatváltoztatás!");
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett vásárló nem létezik, vagy nincs eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett vásárló nem létezik, vagy nincs eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
                 }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpDelete("{id}")]
         public ActionResult<VasarloDto> Delete(Guid id)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Vasarlos.FirstOrDefault(x => x.Id == id);
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett != null)
+                    var kerdezett = context.Vasarlos.FirstOrDefault(x => x.Id == id);
+
+                    if (context != null)
                     {
-                        context.Vasarlos.Remove(kerdezett);
-                        context.SaveChanges();
-                        return Ok("A vásárló eltávolítása sikeresen megtörtént");
+                        if (kerdezett != null)
+                        {
+                            context.Vasarlos.Remove(kerdezett);
+                            context.SaveChanges();
+                            return Ok("A vásárló eltávolítása sikeresen megtörtént");
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett vásárló eddig sem létezett, vagy nem volt eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett vásárló eddig sem létezett, vagy nem volt eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
 
+                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
     }
 }

@@ -125,8 +125,7 @@ namespace GearBoxMaintainApp.Windows.Product_Controllers {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GearBoxMaintainApp;V1.0.0.0;component/windows/product_controllers/productedit.xa" +
-                    "ml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GearBoxMaintainApp;component/windows/product_controllers/productedit.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Windows\Product_Controllers\ProductEdit.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

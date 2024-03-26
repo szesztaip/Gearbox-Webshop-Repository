@@ -12,96 +12,126 @@ namespace Gearbox_Back_End.Controllers
         [HttpPost]
         public ActionResult<KosarKapcsolatDto> Post(CreateKosarKapcsolat createKosarKapcsolat)
         {
-            var UjKosarKapcsolat = new Kosarkapcsolat
+            try
             {
-                Id = new Guid(),
-                VasarloId = createKosarKapcsolat.VasarloId,
+                var UjKosarKapcsolat = new Kosarkapcsolat
+                {
+                    Id = new Guid(),
+                    VasarloId = createKosarKapcsolat.VasarloId,
 
-            };
-            using (var context = new GearBoxDbContext())
-            {
-                if (context != null)
+                };
+                using (var context = new GearBoxDbContext())
                 {
-                    context.Kosarkapcsolats.Add(UjKosarKapcsolat);
-                    context.SaveChanges();
-                    return StatusCode(201, "Az adatok sikeresen eltárolva!");
-                }
-                else
-                {
-                    return StatusCode(406, "Nem megfeleő az adat formátuma!");
+                    if (context != null)
+                    {
+                        context.Kosarkapcsolats.Add(UjKosarKapcsolat);
+                        context.SaveChanges();
+                        return StatusCode(201, "Az adatok sikeresen eltárolva!");
+                    }
+                    else
+                    {
+                        return StatusCode(406, "Nem megfeleő az adat formátuma!");
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpGet]
         public ActionResult<JogosultsagDto> GetAll()
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    return Ok(context.Kosarkapcsolats.Include(x=>x.Kosars).ToList());
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
+                    if (context != null)
+                    {
+                        return Ok(context.Kosarkapcsolats.Include(x => x.Kosars).ToList());
+                    }
+                    else
+                    {
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         [HttpGet("{id}")]
         public ActionResult<JogosultsagDto> Get(Guid id)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Kosarkapcsolats.Include(x=>x.Kosars).FirstOrDefault(x=>x.Id == id);
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett != null)
+                    var kerdezett = context.Kosarkapcsolats.Include(x => x.Kosars).FirstOrDefault(x => x.Id == id);
+
+                    if (context != null)
                     {
-                        return Ok(kerdezett);
+                        if (kerdezett != null)
+                        {
+                            return Ok(kerdezett);
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett kosárkapcsolat nem létezik, vagy nincs eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett kosárkapcsolat nem létezik, vagy nincs eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
                 }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
-
-
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+           
         }
 
         [HttpDelete("{id}")]
         public ActionResult<JogosultsagDto> Delete(Guid id)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                var kerdezett = context.Kosarkapcsolats.FirstOrDefault(x => x.Id == id);
-
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    if (kerdezett != null)
+                    var kerdezett = context.Kosarkapcsolats.FirstOrDefault(x => x.Id == id);
+
+                    if (context != null)
                     {
-                        context.Kosarkapcsolats.Remove(kerdezett);
-                        context.SaveChanges();
-                        return Ok("A kosárkapcsolat eltávolítása sikeresen megtörtént");
+                        if (kerdezett != null)
+                        {
+                            context.Kosarkapcsolats.Remove(kerdezett);
+                            context.SaveChanges();
+                            return Ok("A kosárkapcsolat eltávolítása sikeresen megtörtént");
+                        }
+                        else
+                        {
+                            return StatusCode(404, "A keresett kosárkapcsolat eddig sem létezett, vagy nem volt eltárolva");
+                        }
                     }
                     else
                     {
-                        return StatusCode(404, "A keresett kosárkapcsolat eddig sem létezett, vagy nem volt eltárolva");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
-                }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
 
+                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
     }
 }

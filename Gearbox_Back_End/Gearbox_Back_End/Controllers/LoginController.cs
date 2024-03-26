@@ -53,36 +53,44 @@ namespace Gearbox_Back_End.Controllers
         [HttpPost("bejelentkezes")]
         public ActionResult<LoginVasarlo> Login(LoginVasarlo loginVasarlo)
         {
-            using (var context = new GearBoxDbContext())
+            try
             {
-                if (context != null)
+                using (var context = new GearBoxDbContext())
                 {
-                    var kerdezett = context.Vasarlos.FirstOrDefault(x => x.Email == loginVasarlo.Email);
-                    if (kerdezett != null)
+                    if (context != null)
                     {
-                        if (!BCrypt.Net.BCrypt.Verify(loginVasarlo.Jelszo, kerdezett.Hash))
+                        var kerdezett = context.Vasarlos.FirstOrDefault(x => x.Email == loginVasarlo.Email);
+                        if (kerdezett != null)
                         {
-                            return StatusCode(406, "Hibás adatok!");
+                            if (!BCrypt.Net.BCrypt.Verify(loginVasarlo.Jelszo, kerdezett.Hash))
+                            {
+                                return StatusCode(406, "Hibás adatok!");
+                            }
+                            else
+                            {
+                                string token = CreateToken(kerdezett);
+                                Token tokenUser = new Token();
+                                tokenUser.UserToken = token;
+                                return Ok(tokenUser);
+                            }
+
                         }
                         else
                         {
-                            string token = CreateToken(kerdezett);
-                            Token tokenUser = new Token();
-                            tokenUser.UserToken = token;
-                            return Ok(tokenUser);
+                            return StatusCode(404, "Nem létezik ilyen felhasználó!");
                         }
-
                     }
                     else
                     {
-                        return StatusCode(404, "Nem létezik ilyen felhasználó!");
+                        return StatusCode(503, "A szerver jelenleg nem elérhető");
                     }
                 }
-                else
-                {
-                    return StatusCode(503, "A szerver jelenleg nem elérhető");
-                }
             }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+            
         }
 
         private string CreateToken(Vasarlo vasarlo)
