@@ -38,7 +38,49 @@ namespace GearBoxMaintainApp.Windows.User_Controllers
                 jelszo = Password.Text
             };
 
-            MessageBox.Show(CRUD.Registration(token,regisztracio));
+            if ((regisztracio.email.Contains("@") && regisztracio.email.Contains(".hu")) || (regisztracio.email.Contains("@") && regisztracio.email.Contains(".com")))
+            {
+                byte uccc = 0;
+                byte occc = 0;
+
+                foreach (var item in regisztracio.email)
+                {
+                    if (item == '@')
+                    {
+                        occc++;
+                    }
+                }
+
+                if (occc>1)
+                {
+                    MessageBox.Show("Invalid email address");
+                }
+                else
+                {
+                    foreach (var item in regisztracio.email.Split('@')[1])
+                    {
+                        if (item == '.')
+                        {
+                            uccc++;
+                        }
+                    }
+
+                    if (uccc > 1)
+                    {
+                        MessageBox.Show("Invalid email address");
+                    }
+                    else
+                    {
+                        MessageBox.Show(CRUD.Registration(token, regisztracio));
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid email address");
+            }
+
+
 
         }
     }

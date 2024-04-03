@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\
+C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\obj\Debug\net7.0-windows\
 GearBoxMaintainApp
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\Péter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\App.xaml
+C:\Users\peter\Documents\Projektmunka\Gearbox-Webshop-Repository\GearBoxMaintainApp\GearBoxMaintainApp\App.xaml
 8-40280667
 
 28-57636906
-2041205140231
+2041606182934
 Login.xaml;Windows\Hub.xaml;Windows\Product_Controllers\ProductAdd.xaml;Windows\Product_Controllers\ProductEdit.xaml;Windows\Product_Controllers\ProductMain.xaml;Windows\User_Controllers\UserAdd.xaml;Windows\User_Controllers\UserEdit.xaml;Windows\User_Controllers\UserMainPage.xaml;
 
 True
