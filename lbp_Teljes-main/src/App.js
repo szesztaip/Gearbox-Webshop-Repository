@@ -6,9 +6,9 @@ import Home from './Home';
 import Women from './Women';
 import Men from './Men';
 import Children from './Children';
-import Shoes from './Shoes';
-import Shirts from './Shirts';
-import Pants from './Pants';
+import Shoes from './WShoes';
+import Shirts from './WShirts';
+import Pants from './WPants';
 import Cart from './Cart';
 import Footer from './Footer';
 import Login from './Login';
@@ -17,6 +17,12 @@ import { Hover } from './Hover';
 import { CartProvider } from './CartContext';
 
 import './App.css';
+import MShoes from './MShoes';
+import MShirts from './MShirts';
+import MPants from './MPants';
+import CShoes from './CShoes';
+import CPants from './CPants';
+import CShirts from './CShirts';
 
 
 const App = () => {
@@ -42,7 +48,14 @@ const App = () => {
               <Route path="/pants" element={<Pants/>} />
               <Route path="/login" element={<Login />} />
               <Route path="/Cart" element={<Cart/>} />
-              <Route path="/user" element={<User />} /> {/* Adjuk hozzá az új útvonalat */}
+              <Route path="/user" element={<User />} />
+              <Route path="/mshoes" element={<MShoes />} />
+              <Route path="/mshirts" element={<MShirts />} />
+              <Route path="/mpants" element={<MPants />} />
+              <Route path="/cshoes" element={<CShoes />} />
+              <Route path="/cshirts" element={<CShirts />} />
+              <Route path="/cpants" element={<CPants />} />
+               {/* Adjuk hozzá az új útvonalat */}
             </Routes>
           </div>
 

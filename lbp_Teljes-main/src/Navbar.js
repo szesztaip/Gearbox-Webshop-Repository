@@ -52,22 +52,22 @@ function Navbar() {
           <li className="dropdown">Women
             <div className="dropdown-content">
               <Link to="/shoes">Shoes</Link>
-              <Link to="/women/shirts">Shirts</Link>
-              <Link to="/women/pants">Pants</Link>
+              <Link to="/shirts">Shirts</Link>
+              <Link to="/pants">Pants</Link>
             </div>
           </li>
           <li className="dropdown">Men
             <div className="dropdown-content">
-              <Link to="/men/shoes">Shoes</Link>
-              <Link to="/men/shirts">Shirts</Link>
-              <Link to="/men/pants">Pants</Link>
+              <Link to="mshoes">Shoes</Link>
+              <Link to="/mshirts">Shirts</Link>
+              <Link to="/mpants">Pants</Link>
             </div>
           </li>
           <li className="dropdown">Children
             <div className="dropdown-content">
-              <Link to="/children/shoes">Shoes</Link>
-              <Link to="/children/shirts">Shirts</Link>
-              <Link to="/children/pants">Pants</Link>
+              <Link to="/cshoes">Shoes</Link>
+              <Link to="/cshirts">Shirts</Link>
+              <Link to="/cpants">Pants</Link>
             </div>
           </li>
         </ul>

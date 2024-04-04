@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { useCart } from './CartContext'; // Kosár kontextus importálása
 
-function Shoes() {
+function CShirts() {
   const { addToCart } = useCart();
-  const [shoes, setShoes] = useState([]);
+  const [cshirts, setCShirts] = useState([]);
   const [categoryData, setCategoryData] = useState({});
 
   useEffect(() => {
-    const fetchShoes = async () => {
+    const fetchCShirts = async () => {
       try {
         const response = await fetch('https://localhost:7063/Termek');
         if (response.ok) {
-          const fetchedShoes = await response.json();
-          setShoes(fetchedShoes);
+          const fetchedCShirts = await response.json();
+          setCShirts(fetchedCShirts);
         } else {
           throw new Error('API response was not ok.');
         }
       } catch (error) {
-        console.error('Failed to fetch shoes data:', error);
-        setShoes([]);
+        console.error('Failed to fetch CShirts data:', error);
+        setCShirts([]);
       }
     };
 
-    fetchShoes();
+    fetchCShirts();
   }, []);
 
   const fetchCategory = async (categoryId) => {
@@ -43,12 +43,13 @@ function Shoes() {
   };
 
   useEffect(() => {
-    shoes.forEach((shoe) => {
-      fetchCategory(shoe.kategoriaId);
+    cshirts.forEach((cshirt) => {
+      fetchCategory(cshirt.kategoriaId);
+      console.log(cshirt);
     });
-  }, [shoes]);
+  }, [cshirts]);
 
-  const handleBuyNow = (shoe) => {
+  const handleBuyNow = (cshirt) => {
     // Ellenőrizze, hogy van-e userToken a localStorage-ban
     const userToken = localStorage.getItem('userToken');
     if (!userToken) {
@@ -57,29 +58,29 @@ function Shoes() {
       return;
     }
     // Ha van userToken, akkor hozzáadja a terméket a kosárhoz
-    addToCart(shoe);
+    addToCart(cshirt);
   };
 
   return (
     <div className="container">
-      {shoes.map((shoe) => {
-        if (categoryData[shoe.kategoriaId] === "Cipő") {
+      {cshirts.map((cshirt) => {
+        if (categoryData[cshirt.kategoriaId] === "Póló" && cshirt.besorolasId === "80671620-c381-453f-b0cc-448feb115cc3") {
           return (
-            <div className="card" key={shoe.id}>
+            <div className="card" key={cshirt.id}>
               <div className="imgBx">
-                <img src={shoe.kep} alt={shoe.nev} />
+                <img src={cshirt.kep} alt={cshirt.nev} />
               </div>
               <div className="details">
-                <h2>{categoryData[shoe.kategoriaId]}</h2>
+                <h2>{categoryData[cshirt.kategoriaId]}</h2>
                 <h4>Product Details</h4>
-                <p>{shoe.leiras}</p>
+                <p>{cshirt.leiras}</p>
                 <h4>Size</h4>
                 <ul className="size">
-                  <li>{shoe.meret}</li>
+                  <li>{cshirt.meret}</li>
                 </ul>
                 <div className="group">
-                  <h2><sup>Ft</sup>{shoe.ar}<small>.99</small></h2>
-                  <button onClick={() => handleBuyNow(shoe)}>Buy Now</button> {/* Kosárhoz adás */}
+                  <h2><sup>Ft</sup>{cshirt.ar}<small>.99</small></h2>
+                  <button onClick={() => handleBuyNow(cshirt)}>Buy Now</button> {/* Kosárhoz adás */}
                 </div>
               </div>
             </div>
@@ -92,4 +93,4 @@ function Shoes() {
   );
 }
 
-export default Shoes;
+export default CShirts;
