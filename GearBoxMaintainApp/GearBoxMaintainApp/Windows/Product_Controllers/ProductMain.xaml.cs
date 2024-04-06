@@ -75,5 +75,33 @@ namespace GearBoxMaintainApp.Windows
             hub.Show();
             this.Close();
         }
+
+        private void PictureUploader_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var fileDialog = new Microsoft.Win32.OpenFileDialog();
+                fileDialog.Multiselect = false;
+                fileDialog.DefaultExt = ".png";
+                fileDialog.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg";
+
+                // Show the dialog and check if the user selected a file
+                if (fileDialog.ShowDialog() == true)
+                {
+                    if (CRUD.FTPUploader(fileDialog.FileName))
+                    {
+                        MessageBox.Show("Upload succesfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed Upload!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
     }
 }

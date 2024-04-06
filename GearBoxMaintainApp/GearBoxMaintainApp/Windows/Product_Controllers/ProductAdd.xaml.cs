@@ -24,6 +24,7 @@ namespace GearBoxMaintainApp.Windows.Product
     public partial class ProductAdd : Window
     {
         string tok;
+        string picture;
         public ProductAdd(string token)
         {
             tok = token;
@@ -75,9 +76,49 @@ namespace GearBoxMaintainApp.Windows.Product
                 termek.vanEraktaron = false;
             }
             termek.ar = Checker(Price.Text);
-            termek.kep = Picture.Text;
+
+            if (Upload.IsChecked == true)
+            {
+                if (CRUD.FTPUploader(picture))
+                {
+                    termek.kep = Picture.Text;
+                }
+                else
+                {
+                    termek.kep = "http://img.gearbox.szakdoga.net/default_img.jpg";
+                }
+            }
+            else
+            {
+                termek.kep = Picture.Text;
+            }
+
+
 
             MessageBox.Show(CRUD.PostTermekek(tok, termek));
+        }
+
+        private void OpenFile_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var fileDialog = new Microsoft.Win32.OpenFileDialog();
+                fileDialog.Multiselect = false;
+                fileDialog.DefaultExt = ".png";
+                fileDialog.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg";
+
+                // Show the dialog and check if the user selected a file
+                if (fileDialog.ShowDialog() == true)
+                {
+                    string ftpServerUrl = "http://img.gearbox.szakdoga.net/";
+                    Picture.Text = ftpServerUrl + fileDialog.FileName.Split('\\').Last();
+                    picture = fileDialog.FileName;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
     }
 }

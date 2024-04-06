@@ -16,8 +16,9 @@
             <Button x:Name="Select" Content="Refresh" Width="100" Height="20" Margin="0 10 0 0" Click="Select_Click"/>
             <Button x:Name="Add_Product" Content="New Product" Margin="0 10 0 0" Width="100" Click="Add_Product_Click"/>
             <Button x:Name="Edit" Content="Edit" Margin="0 10 0 0" Width="100" Click="Edit_Click"/>
-            <Button x:Name="Delete_Product" Content="Delete" Margin="0 10 0 0" Width="100" Click="Delete_Product_Click"/>
-            <Button x:Name="Back" Content="Back" Margin="0 10 0 0" Width="100" Click="Back_Click" VerticalAlignment="Bottom"/>
+            <Button x:Name="PictureUploader" Content="Upload Picture" Margin="0 10 0 0" Width="100" Click="PictureUploader_Click"/>
+            <Button x:Name="Delete_Product" Content="Delete" Margin="0 50 0 0" Width="100" Click="Delete_Product_Click"/>
         </StackPanel>
+        <Button Grid.Column="1" x:Name="Back" Content="Back" Margin="10" Width="100" Click="Back_Click" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

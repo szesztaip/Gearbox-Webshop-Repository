@@ -13,6 +13,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.VisualBasic;
 using Microsoft.Win32;
 using Gearbox_Back_End.Models;
+using System.IO;
 
 namespace GearBoxMaintainApp.Tool_Classes
 {
@@ -262,5 +263,47 @@ namespace GearBoxMaintainApp.Tool_Classes
         }
 
         #endregion
+
+        public static bool FTPUploader(string PicPath)
+        {
+            try
+            {
+                string ftpUrl = "ftp://ftp.nethely.hu/";
+                string userName = "gearboximgs";
+                string password = "gearboximgs268#";
+
+                // Get the file name without the path
+                var fileName = PicPath.Split('\\').Last();
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(ftpUrl + fileName);
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+                request.Credentials = new NetworkCredential(userName, password);
+                request.UseBinary = true;
+
+                byte[] fileContents;
+                using (FileStream fileStream = File.OpenRead(PicPath))
+                {
+                    fileContents = new byte[fileStream.Length];
+                    fileStream.Read(fileContents, 0, fileContents.Length);
+                }
+
+                // Upload file
+                using (Stream requestStream = request.GetRequestStream())
+                {
+                    requestStream.Write(fileContents, 0, fileContents.Length);
+                }
+
+                // Get response
+                using (FtpWebResponse response = (FtpWebResponse)request.GetResponse())
+                {
+                    MessageBox.Show($"Upload complete. Server response: {response.StatusDescription}");
+                }
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error : "+e.Message);
+                return false;
+            }
+        }
     }
 }

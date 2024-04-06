@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GearBoxMaintainApp.Windows.Product"
         mc:Ignorable="d"
-        Title="ProductAdd" Height="480" Width="300">
+        Title="ProductAdd" Height="560" Width="300">
     <Grid>
         <StackPanel>
             <StackPanel Orientation="Horizontal" Margin="42 10 0 10">
@@ -40,6 +40,11 @@
                 <Label Content="Picture : " FontSize="20"/>
                 <TextBox x:Name="Picture" Width="150"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="34 0 0 10">
+                <Label Content="Upload Picture :" FontSize="20"/>
+                <CheckBox Margin="10" x:Name="Upload"/>
+            </StackPanel>
+            <Button x:Name="OpenFile" FontSize="20" Content="Open picture" Width="150" Height="35" Click="OpenFile_Click"/>
             <Button x:Name="Add" Content="Add" Width="100" HorizontalAlignment="Left" FontSize="20" Margin="10 10 10 10" Click="Add_Click" VerticalAlignment="Bottom"/>
         </StackPanel>
     </Grid>
